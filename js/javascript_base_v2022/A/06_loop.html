@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loop</title>
+</head>
+
+<body>
+    <h1>Loop</h1>
+    <script>
+
+    </script>
+    <hr>
+    <h2>for 반복문</h2>  
+    <pre>
+        for(초기값;조건;증감){
+            반복..
+        }
+    </pre>  
+    <script>
+        /*
+        let i = 0;
+        document.write(i+'<br>');
+        //i= i+2;
+        i +=2;
+        document.write(i+'<br>');
+        i +=2;
+        document.write(i+'<br>');
+        i +=2;
+        document.write(i+'<br>');
+        i +=2;
+        document.write(i+'<br>');
+        i +=2;
+        document.write(i+'<br>');
+
+        for(초기값;조건;증감){
+            반복..
+        }
+        */        
+        for(let i = 0; i<11; i +=2){
+            document.write(i+'<br>');
+        }
+        // 초기값 1, 1씩 증가, 10까지 
+        for(let n = 0; n<=10;n++){
+            document.write(n+'<br>'); 
+        }
+    </script>
+    <h2>while 반복문</h2>
+    <pre>
+        초기값;
+        while(조건){
+            반복할일;
+            증감;
+        }
+    </pre>
+    <script>
+        let i = 0
+        while(i<11){
+            document.write(i+'<br>');
+            i +=2;
+        }
+    </script>
+    <h2>do while 반복문</h2>
+    <pre>
+        초기값;
+        do{
+            반복할 일;
+            증감;
+        } while(조건);
+    </pre>
+    <script>
+        let x = 0
+        do{
+            document.write(x+'<br>');
+            x +=2;
+        } while(x<=10);
+    </script>
+    <h2>forEach 반복문</h2>
+    <pre>
+        배열에 값들 반복
+        배열.forEach(function(각아이템,인덱스,전체값){
+
+        });
+
+        `문자${}`
+    </pre>
+    <script>
+        let arr = ['a','b','c','d','e'];
+        arr.forEach(function(item, index, all){
+            
+            // document.write(item + '는 배열' + all + '에서' + index + '번째 값입니다.<br>');
+            document.write(`${item}는 배열 ${all}에서 ${index}번째 값입니다.<br>`);
+        });
+    </script>
+    <h2>for in 반복문</h2>
+    <pre>
+        객체의 값-반복
+        for(원소 in 객체명){
+            반복할일
+        }
+    </pre>
+    <script>
+        let st1 = {
+            kor:90,
+            eng:90,
+            math:100
+        }
+        for(item in st1){
+            document.write(`${item} 점수는 ${st1[item]}점<br>`);
+        }
+        /*
+        st1[kor]
+        eng 점수는 **점
+        kor 점수는 **점
+        math 점수는 **점
+        */
+
+    </script>
+    <h2>for of 반복문</h2>
+    <pre>
+        배열에서 반복
+        index 사용불가
+        for(원소명 of 배열명){
+            반복...
+        }
+    </pre>
+    <script>
+        for(item of arr){
+            document.write(`arr 배열의 값은 ${item}입니다.<br>`);
+        }
+    </script>
+    <hr>
+    <ul id="list"></ul>
+    <script>
+        let list = document.querySelector('#list');
+        let listHtml='';
+        for(item of arr){
+
+            //i= i+2;
+            //i +=2;
+            // listHtml = listHtml + `<li>${item}</li>`;
+            listHtml += `<li>${item}</li>`;
+            console.log(listHtml);
+        }
+       
+        list.innerHTML = listHtml;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>check cookie</title>
+  <script>
+    function checkcookie() {
+      alert(document.cookie);
+      console.log(typeof(document.cookie))
+    }
+  </script>
+</head>
+<body>
+  <h1>쿠키확인</h1>
+  <button id="check">Check cookie</button>
+  <script>
+    document.querySelector('#check').addEventListener('click', ()=> {
+      checkcookie();
+    })
+  </script>
+</body>
+</html>

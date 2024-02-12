@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loop ex</title>
+</head>
+
+<body>
+   <h1>구구단</h1>
+
+   <pre>
+    for 반복문
+    2x1=2
+    2x2=4
+    ...
+    2x9=18
+   </pre>
+   <script>
+    /*
+    document.write('2x1=2<br>');
+    document.write('2x2=4<br>');
+    document.write('2x3=6<br>');
+
+
+       document.write('------------2단------------<br>');
+       document.write('------------3단------------<br>');
+       document.write('------------4단------------<br>');
+       document.write('------------5단------------<br>');
+       document.write('------------6단------------<br>');
+    */
+   for(let i=1;i<10;i++){
+    document.write(`2x${i}=${i*2}<br>`);
+   }
+   </script>
+   <hr>
+   <script>
+    for(let i=2;i<10;i++){
+        document.write(`------------${i}단------------<br>`);
+        for(let x=1;x<10;x++){
+            document.write(`${i}x${x}=${i*x}<br>`);
+        }        
+    }
+   </script>
+</body>
+
+</html>

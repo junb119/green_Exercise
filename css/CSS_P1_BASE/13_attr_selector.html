@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute - CSS Selector</title>
+    <style>
+        [target] {
+            text-decoration: none;
+        }
+        [target="_blank"] {
+            background-color: silver;
+        }
+        [class] {
+            font-weight: bold;
+        }
+        [class^="inner"]{
+            font-weight: bold;
+        }
+        [class$="big"]{
+            font-size: 50px;
+        }
+        p a[title] {
+            color: red
+        }
+        [title~="flower"] { /* flower 단어절(공백)을 포함하는 title 속성값 */
+        
+        }
+        [title*="flower"] { /* flower 문자를 포함하는 title 속성값 */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2 title="title">title</h2>
+    <p>
+        <a href="" class="inner_sm" title="link">link</a>
+        <a href="" target="_blank" class="sm" title="협력사 네이버">naver</a>
+        <a href="" target="_blank">daum</a>
+        <a href="" target="_self" class="inner_big">google</a>
+    </p>
+</body>
+
+</html>

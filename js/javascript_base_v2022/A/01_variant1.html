@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>변수 - 자바스크립트 기초</title>
+    <meta name="description" content="">
+    <meta name="author" content="user1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>변수</h1>
+
+    <script>
+        var $myname = '"홍길동"'; //초기화(최소 선언)
+            myname = '이도령';
+        var myage = 32;
+        document.write($myname);
+        document.write(myage);
+
+        //let
+        let num = 30; //초기화
+            num = 40; //재할당
+        document.write(num);   
+
+        var num1 = 50;
+        {
+            var num2 = 100;
+        }
+        document.write(num1);  
+        document.write(num2);  
+
+        let num3 = 60;
+        {
+            let num4 = 100;
+                num4 = 120;
+            document.write(num4); 
+        }
+        document.write(num3);  
+
+        //const, 한번 선언 절대 변경불가
+        const mynum = 2024;
+           //재할당 불가 mynum = 2025; 
+        document.write(mynum);  
+
+        // boolean
+        let married = false;  //true, false
+        let checked = true;
+        let timer = null; //null 빈값 값이 있지만 비어있다.
+        let timer2 = undefined; //아무값도 지정하지 않은 상태
+        let timer3;
+
+        console.log(timer);
+        console.log(timer2);
+        console.log(timer3);
+
+    </script>
+
+</body>
+
+</html>

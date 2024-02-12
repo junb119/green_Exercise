@@ -1,0 +1,151 @@
+@charset 'utf-8';
+@import url('normalize.css');
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Libre+Baskerville:ital@1&family=PT+Serif:ital@0;1&display=swap');
+
+@textcolor:#6f6f6f;
+@titlecolor:#444;
+@bordercolor:#838383;
+@highlight :#e3514e;
+.ff{
+  font-family: 'PT Serif', serif;
+}
+
+/* ---------------- layout ----------------  */
+.container{
+	width: 640px;
+	margin: 0 auto;
+}
+/* typography */
+body{
+	.ff;
+	font-size:18px;
+	line-height: 34px;
+	// font: 18px/34px  'PT Serif', serif;
+	color:@textcolor;
+}
+
+/* form */
+
+/* link button */
+
+/* color */
+
+/* ================ SECTIONS ================ */
+/* header */
+header{
+	height: 600px;
+	background:url(../images/header_bg.jpg) no-repeat 50% 0/ cover;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	z-index:1;
+	padding-top: 60px;
+	box-sizing: border-box;
+  &:after{
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,.5);
+    z-index:-1;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+  h1{
+    margin-bottom: 127px;
+  }
+  a{
+    color: #fff;
+    border:1px solid #fff;
+    height: 53px;
+    display: inline-block;
+    padding: 0 20px;
+    box-sizing: border-box;
+    line-height: 51px;
+    font-family: 'Bentham', serif;
+    font-size: 30px ;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;	
+  }
+  h2{
+    font:60px/72px 'Bentham', serif;
+    width: 660px;
+    margin:0 auto 14px;
+    span{
+      font-family: 'Libre Baskerville', serif;
+    }
+  }
+  p{
+    font-style:italic;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Main */
+main{
+	padding: 100px 0 110px;
+  h2{
+    font-family: 'Bentham', serif;
+    text-transform: uppercase;
+    font-size: 42px;
+    line-height: 50px;
+    color: @titlecolor;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  h3{
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: @titlecolor;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  p{
+    margin-bottom: 34px;
+    &:last-of-type{
+      margin-bottom: 50px;
+    }
+    em{
+      color: @highlight;
+    }
+  }
+  ul{
+    border:1px solid @bordercolor;
+    li{
+      width: 25%;
+      height: 52px;
+      line-height: 52px;
+      float:left;
+      border-right:1px solid @bordercolor;
+      box-sizing: border-box;
+      text-align: center;
+      text-transform: uppercase;
+      &:last-child{
+        border-right: none;
+      }
+      a{
+        color: inherit;
+        display: block;
+      }
+      &:hover a{
+        background: @highlight;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* footer */
+footer{
+	background: #555;
+	text-align: center;
+	color: #fff;
+	line-height: 66px;
+	font-size: 14px;
+}

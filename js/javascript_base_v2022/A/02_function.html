@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>function - javascript Basic</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <pre>
+        *함수생성
+        function 함수명() { 할일 }
+        
+        *함수실행
+        함수명();
+    </pre>
+    <script>
+        let num = 20;
+
+        //alrim(); //이름이 있는 함수는 정의 전에도 호출(실행)가능하다.
+
+        function alrim(){
+            alert('반갑습니다');
+        }
+    </script>
+    <hr>
+    <h2>함수의 구조</h2>
+    <pre>
+        함수 = 공장
+
+        입력->할일->출력
+        자재입고->공장할일->출고
+    </pre>
+    <script>
+        //let msg = '반갑습니다2.';
+        alrim2('안녕');
+
+        function alrim2(message){ //message 매개변수(parameter)
+            alert(message);
+        }        
+        
+
+        //let sum ; //전역변수 어느곳에서도 사용 가능
+        function add(a,b){//a,b 매개변수(parameter) 
+           let sum = a+b; //sum 지역변수
+            return sum; //값을 반환(return)해준다.
+        }
+        let result2 = add(3,5); //3,5 인수(argument)
+        document.write(result2);
+    </script>
+    <hr>
+    <h3>익명함수</h3>
+    <pre>
+        이름이 없는 함수는 반드시 변수에 할당해야 한다.
+        let 함수명(변수명) = 함수
+
+        함수명();
+
+        변수명에 할당후에만 함수 실행가능.
+    </pre>
+    <script>
+        console.log(test);
+        let test = 'test';
+
+
+
+        let sum2 = function(x,y){
+            let z = x+y;
+            return z;
+        }
+        let result = sum2(10,30);
+        document.write(result);
+
+    </script>
+    <h3>즉시 실행 함수</h3>
+    <script>
+        let sum3 = (function(x,y){
+            let z = x+y;
+            return z;
+        })(10,30);
+        // let result2 = sum3(10,30);
+        document.write(sum3);
+    </script>
+</body>
+
+</html>

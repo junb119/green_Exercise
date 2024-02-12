@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans";
+  background: #ecf0f1;
+}
+.wrapper {
+  max-width: 60rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.gradientbg{
+  background: linear-gradient(to right, #3498db 20%, #fff 20%, #fff 80%, #34495e 80%);
+}
+.gradientbg::before,
+.gradientbg::after {
+  content: " ";
+  display: table;
+}
+.gradientbg::after {
+  clear: both;
+}
+.gradientbg .sidebar {
+  width: 20%;
+  padding: 1.618rem;
+  color: #fff;
+}
+.gradientbg main {
+  width: 60%;
+  padding: 1.618rem;
+  float: left;
+  margin-left: 20%;
+  background: #fff;
+}
+.gradientbg .left {
+  float: left;
+  margin-left: -80%;
+  background: #3498db;
+}
+.gradientbg .right {
+  float: right;
+  background: #34495e;
+}
+
+/* flex : 
+1. 가장 높이가 큰 요소에 맞춰서 다른 요소의 높이도 늘어남 
+2. 요소들의 순서를 변경가능
+
+*/
+.flexbg{
+  display: flex;
+}
+
+.flexbg main {
+  width: 60%;
+  background: #fff;
+  padding: 1.618rem;
+  
+}
+
+.flexbg .sidebar {
+  width: 20%;
+  padding: 1.618rem;
+  color:#fff;
+  
+}
+.flexbg .left {
+  background: #3498db;
+  order:-1
+}
+.flexbg .right {
+  background: #34495e;
+  
+
+}
+
+
+/* 미디어쿼리 반응형 */
+/* @media : screen  : screen을 가진 기기*/
+/* @media screen and (max-width:1000px) { */  /* 1000px 이하 구간의 css */
+  /* body {
+    background:green;
+  }
+  
+}
+@media screen and (max-width:768px) { 
+  body {
+    background:blue;
+  }
+  
+}
+@media screen and (max-width:480px) { 
+  body {
+    background:black;
+  }
+  
+} */
+
+
+
+@media screen and (max-width:785px) {
+  .gradientbg{
+    background: linear-gradient(to right , #3498db 50%, #34495e 50%)
+  }
+  
+  .gradientbg main {
+    width:100%;
+    margin-left: 0;
+  }
+  .gradientbg .sidebar {
+    width:50%;
+  }
+  .gradientbg .left  {
+    margin-left: 0;
+  }
+  .flexbg{
+    flex-wrap: wrap;
+  }
+  .flexbg main {
+    width: 100%;
+    
+  }
+  .flexbg .left {
+    order:0
+  }
+
+  .flexbg .sidebar {
+    width: 50%;
+  }
+
+
+}
+
+@media screen and (max-width:480px) {
+  .gradientbg .sidebar {
+    width: 100%;
+  }
+  .gradientbg {
+    background: none;
+  }
+
+  .flexbg .sidebar {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>timer</title>
+</head>
+
+<body>
+    <h1>Timer</h1>
+    <h2>setTimeout</h2>
+    <pre>
+        타이머를 한번 세팅, 그 시간이 소진되면 할일
+        setTimeout( 함수 , 5000)
+
+        타이머해제
+        clearTimeout(타이머의 이름);
+    </pre>
+    <script>
+        let greeting = setTimeout( function () {alert('반갑습니다.')}, 4000);
+        clearTimeout(greeting)
+    </script>
+    
+    <h2>setInterval</h2>
+    <pre>
+        일정 시간 마다 할일
+        setInterval(할일, 시간)
+    </pre>
+    <script>
+        // 4초 마다 반갑습니다. 경고창
+        let autoGreeting = setInterval( function () {alert('반갑습니다.')}, 4000);
+        clearInterval(autoGreeting)
+    </script>
+    <hr>
+    <script>
+        // 4초 마다 반갑습니다. 경고창 
+        
+        
+        let count = 0;
+        
+        let time = setInterval( function () {alert('반갑습니다.');count++; if (count === 4) clearInterval(time)} ,4000);
+        
+        
+
+
+            
+    
+    
+        
+    </script>
+</body>
+
+</html>

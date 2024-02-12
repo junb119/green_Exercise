@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location</title>
+  <style>
+    #map{
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Location</h1>
+    <ul class="menu">
+      <li><a href="#" data-lat="37.5666612" data-lng="126.9783785">서울 지점</a></li>
+      <li><a href="#" data-lat="38.2073706" data-lng="128.5922597">속초 지점</a></li>
+      <li><a href="#" data-lat="33.4996213" data-lng="126.5311884">제주 지점</a></li>
+    </ul>
+    <div id="map"></div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e73a8944e588ffa14fb33d5427ce1041"></script>
+
+    <script src="map.js"></script>
+    
+    <script>  
+      makeMap('서울지점', 'map',37.5666612,126.9783785);
+
+      const mapMenu = document.querySelectorAll('.menu a');
+
+      for(let mm of mapMenu){
+        mm.addEventListener('click',(e)=>{
+          e.preventDefault();
+          let msg = e.target.innerHTML;
+          let lat = e.target.getAttribute('data-lat');
+          let lng = e.target.getAttribute('data-lng');
+          makeMap(msg, 'map',lat,lng);
+        });
+      }    
+    </script>
+</body>
+</html>

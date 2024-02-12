@@ -1,0 +1,26 @@
+.num {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  lighting-color: 50px;
+  border :1px solid;
+  margin : 2rem auto;
+  font-size: 2rem;
+  
+}
+.counters, .stats {
+  display: flex;
+  justify-content: center;
+  gap:10px
+}
+section {
+  height: 90vh;
+}
+.counters > div , .stats > div{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid;
+  font-size: 2rem;
+}

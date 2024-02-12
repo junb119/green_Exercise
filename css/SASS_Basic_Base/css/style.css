@@ -1,0 +1,25 @@
+body {
+  color: #444444;
+}
+
+h1 {
+  color: #222222;
+  background: #ebebeb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#header {
+  color: black;
+}
+#header nav {
+  font-size: 16px;
+}
+#header nav a {
+  text-decoration: none;
+}
+#header nav a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */

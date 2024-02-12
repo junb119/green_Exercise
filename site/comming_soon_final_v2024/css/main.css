@@ -1,0 +1,254 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&family=PT+Sans&display=swap');
+
+:root {
+  --gp-font : 'Gentium Plus', serif;
+  --ps-font : 'PT Sans', sans-serif;
+  --container : 1000px;
+  --fontsize:  16px;
+  --line-height : 24px;
+  --primary: #f93f1c;
+
+}
+/*
+font-family: 'Gentium Plus', serif;
+font-family: 'PT Sans', sans-serif;
+*/
+
+/* reset */
+a{
+  color:inherit;
+  text-decoration: none;
+}
+img{
+  vertical-align: top;
+}
+.cf:after{
+  content:'';
+  display: block;
+  clear:both;
+}
+button, input{
+  border:none;
+  background: none;
+  padding: 0;
+}
+.blind{
+  display: none;
+}
+/* Layout */
+.container{
+  width: var(--container);
+  margin:0 auto;
+}
+.sec-pd{
+  padding: calc(var(--line-height) * 2) 0;
+}
+header, .freebie, footer{
+  text-align: center;
+}
+hr{
+  margin:48px auto;
+  width: 400px;
+  border:none;
+  /* border-top:1px solid #d1d6d4; */
+  height: 1px;
+  background-color:#d1d6d4;  
+}
+/* Typography */
+body{
+  font:var(--fontsize)/var(--line-height) var(--ps-font);
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--gp-font);
+}
+.content-tt{
+  font-size: var(--line-height);
+  text-align:center;
+}
+.content-tt:before{
+  content:'- ';
+}
+.content-tt:after{
+  content:' -';
+}
+
+
+body{
+  background: url(../images/light-bg.jpg);
+}
+
+/* header */
+header{
+  background-color: #fff;
+}
+
+h1 a{
+  background:url(../images/logo.png) no-repeat;
+  width: 72px;
+  height: 72px;
+  display: inline-block;
+  text-indent: -9999em;
+}
+header h2{
+  margin-top: 48px;
+  font-size:36px;
+  line-height:48px;
+  width: 507px;
+  display: inline-block;
+}
+header p{
+  width: 598px;
+  margin: 0 auto;
+  font:var(--line-height)/34px var(--gp-font);
+  color:#626262;
+}
+header p strong{
+  color: var(--primary);
+}
+
+.form {
+  background:
+    url(../images/envelopes.png) no-repeat center,
+    url(../images/dark-bg.jpg);  
+}
+.form form{
+  width: 307px;
+  margin:0 auto;
+}
+.form form label{
+  display: none;
+}
+.form form fieldset p + p{
+  margin-top: 6px;
+}
+.form form input{
+  width: 100%;
+  height: 42px;
+  text-align: center;
+  background: #fff;
+  line-height: 42px;
+  font-size: 14px;
+  color: #626262;
+}
+.form form input::-ms-placeholder{
+  color: #c3c3c3;
+}
+.form form input::-webkit-placeholder{
+  color: #c3c3c3;
+}
+.form form input::placeholder{
+  color: #c3c3c3;
+}
+.form form input[type="submit"]{
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.form form .msg{
+  margin:30px 0 var(--line-height);
+  font-size: 14px;
+  color: #c3c3c3;
+  font-style:italic;
+}
+.progress h3{
+  color: #626262;
+}
+.status-box{
+  margin-top: 48px;
+  background: url(../images/light-green-bg.jpg);
+  padding: 15px;
+}
+.bullon{
+  width: 45%;
+  height: 114px;
+  background: rgba(127, 158, 63, .7);
+  text-indent: -9999em;
+  float:left;
+  position: relative;
+  margin-right: 30px;
+}
+.bullon:before{
+  position: absolute;
+  left: 100%;
+  top: 14px;
+  content:'';
+  width: 0;
+  height: 0;
+  border-width:9px 11px;
+  border-style:solid;
+  border-color:transparent transparent transparent rgba(127, 158, 63, .7);
+}
+.desc{
+  width: 282px;
+  float: left;  
+  color: #626262;
+}
+.desc h4{
+  font-weight: bold;
+}
+.box{
+  width: 0;
+  height: 0;
+  /* border:10px solid red; */
+  border-width:40px;
+  border-style:solid;
+  border-color:transparent blue blue transparent;
+  margin:2rem auto;
+}
+.freebie {
+  background: #2f2f2f;
+  color: #c3c3c3;
+}
+.freebie h3{
+  color: #fff;
+}
+.freebie p{
+  width: 325px;
+  margin:var(--line-height) auto 48px;  
+}
+.freebie p strong{
+  color: var(--primary);
+}
+
+footer p:first-of-type{
+  font: var(--line-height)/34px var(--gp-font);
+  width: 433px;
+  margin:0 auto var(--line-height);
+  color: #626262;
+}
+.sns{
+  display: inline-block;
+  margin-bottom: 96px;
+}
+.sns li{
+  float:left;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin:0 5px;
+}
+.sns li span{
+  line-height: 48px;
+  vertical-align: top;
+}
+.sns li a{
+  display: block;
+  background: var(--primary);
+  color: #fff;  
+}
+#back-to-top{
+  width: 48px;
+  height: 48px;
+  background: rgba(0,0,0,.2);
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  position: fixed;
+  left:calc(50% + 452px);
+  /* left:50%;
+  margin-left: 452px; */
+  bottom: 170px;
+}

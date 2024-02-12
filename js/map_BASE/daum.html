@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>인포윈도우 생성하기</title>
+    <style>
+	.map{
+		width:100%;
+		height:350px;
+	}
+	</style>
+</head>
+<body>
+<h1>다음 지도</h1>
+<div id="map1" class="map"></div>
+<div id="map2" class="map"></div>
+
+<button id="nozoom">지도 확대/축소 끄기</button>
+<button id="zoomok">지도 확대/축소 켜기</button>
+<script>
+	document.querySelector('#nozoom').addEventListener('click',()=>{
+		setZoomable(false);
+	});
+	document.querySelector('#zoomok').addEventListener('click',()=>{
+		setZoomable(true);
+	});
+</script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e73a8944e588ffa14fb33d5427ce1041"></script>
+
+<script src="map.js"></script>
+
+<script>
+makeMap('그린 종로캠퍼스', 'map1',37.5697291,126.9897183);
+makeMap('다음 카카오','map2',33.450701, 126.570667);
+
+
+
+
+</script>
+</body>
+</html>

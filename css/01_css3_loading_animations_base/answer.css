@@ -1,0 +1,219 @@
+
+
+
+/* practice */
+
+span[class^="dot"] {
+  /* opacity: 0; */
+}
+.dot_one {
+  animation: dot_one 2s infinite linear;
+}
+@keyframes dot_one {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dot_two {
+  animation: dot_two 2s infinite linear;
+}
+@keyframes dot_two {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dot_three {
+  animation: dot_three 2s infinite linear;
+}
+@keyframes dot_three {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bouncing_ball {
+  width: 4rem;
+  height: 12rem;
+  margin: 0 auto;
+  /* border: 1px solid #fff; */
+  position: relative;
+}
+.ball {
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: scale(1);
+  }
+  35% {
+    top: calc(100% - 4rem);
+    animation-timing-function: ease-out;
+    transform: scale(1.1, 0.9);
+  }
+  45% {
+    transform: scale(1);
+  }
+
+  100% {
+    top: 0;
+  }
+}
+div[class^="curve"] {
+  /* border :1px solid #fff; */
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  transform: rotate(-45deg);
+  animation: spin 4s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+  25% {
+    opacity: .7;
+  }
+
+  50% {
+    transform: rotate(495deg);
+    opacity: 1;
+  }
+  75% {
+    opacity: .7;
+  }
+  100% {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+.spinner {
+  width: 6rem;
+  height: 6rem;
+  /* border: 1px solid #fff; */
+  margin: 6rem auto;
+  position: relative;
+}
+
+.curve_top_left,
+.curve_bottom_right {
+  width: 3rem;
+  height: 3rem;
+}
+.curve_top_right,
+.curve_bottom_left {
+  width: 2rem;
+  height: 2rem;
+}
+.curve_top_left {
+  left: 0;
+  top: 0;
+  border-top-left-radius: 100%;
+  border-width: 0.5rem 0 0 0.5rem;
+  transform-origin: 100% 100%;
+}
+.curve_bottom_right {
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 100%;
+  border-width: 0 0.5rem 0.5rem 0;
+  transform-origin: 0 0;
+}
+.curve_top_right {
+  bottom: 50%;
+  left: 50%;
+  border-top-right-radius: 100%;
+  border-width: 0.5rem 0.5rem 0 0;
+  transform-origin: 0 100%;
+}
+.curve_bottom_left {
+  top: 50%;
+  right: 50%;
+  border-bottom-left-radius: 100%;
+  border-width: 0 0 0.5rem 0.5rem;
+  transform-origin: 100% 0;
+}
+
+.center_circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  animation : pulse 2s infinite; 
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
+}
+

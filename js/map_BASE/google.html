@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Info Windows</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <style>
+      #map {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDefKrUWuCPfR9QOEymnk7SpyOg4RIAJlk&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+    <script>
+      // This example displays a marker at the center of Australia.
+// When the user clicks the marker, an info window opens.
+function initMap() {
+  const seoul = { lat: 37.5666612 , lng: 126.9783785 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 16,
+    center: seoul,
+  });
+  const contentString =
+    `<div id="content">
+      <h1>서울특별시</h1>
+      <div id="bodyContent">
+        <p>서울특별시 중구 세종대로 110</p>
+      </div>
+    </div>
+      `
+    
+    
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "seoul",
+  });
+  const marker = new google.maps.Marker({
+    position: seoul,
+    map,
+    title: "seoul (Ayers Rock)",
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });
+}
+
+window.initMap = initMap;
+    </script>
+  </body>
+</html>

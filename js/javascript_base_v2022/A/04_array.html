@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+    <pre>
+        1.배열생성
+        let 배열명 = []; //빈배열 생성
+        배열명[0] = 값;
+        배열명[1] = 값;
+
+        2.배열생성
+        let 배열명 = [값, 값, 값]; 
+
+        배열명[인덱스번호]  //출력
+    </pre>
+    <script>
+        let frontLangs = [];
+        frontLangs[0] = 'HTML';
+        frontLangs[1] = 'CSS';
+        frontLangs[2] = 'Javascript';
+
+        console.log(frontLangs);
+        document.write(frontLangs[0])
+    </script>
+    <hr>
+    <script>
+        let backLangs = ['php','asp','jsp'];
+        document.write(backLangs[1])
+
+    </script>
+    <hr>
+    <script>
+
+    </script>
+    <h2>length</h2>
+    <pre>배열의 개수</pre>
+    <script>
+        document.write(frontLangs.length)
+    </script>
+    <h2>join</h2>
+    <pre>
+        배열->문자열 변환
+
+        배열명.join();
+        배열명.join('/'); 배열의 값들을 /로 구분하여 하나의 문자열로 합친다
+    </pre>
+    <script>
+        // document.write(frontLangs);  HTML,CSS,Javascript
+        let frontLangs_str = frontLangs.join('/');
+        // document.write(frontLangs_str); //HTML,CSS,Javascript
+        document.write(frontLangs_str); //HTML/CSS/Javascript
+    </script>
+    <h2>reverse</h2>
+    <pre>
+        배열을 역순으로(원본 수정)
+        배열.reverse();
+    </pre>
+    <script>
+        // let front = frontLangs.reverse();
+        // document.write(front);
+        // document.write(frontLangs);
+
+        //배열를 복제하는 방법 1 
+        let front = frontLangs;
+        console.log(front);
+
+        //배열를 복제하는 방법 2 - map 반복문
+        let front1 = frontLangs.map(function(item){
+            return item;
+        });
+        console.log(front1);
+
+        //배열를 복제하는 방법 3 - spread operator 전개 연산자
+        let front2 = [...frontLangs];
+        console.log(front2);
+
+    </script>
+    <h2>sort</h2>
+    <pre>
+        오름, 내림, 알바벳, 가나다...(원본수정)
+        배열명.sort()//알파벳순, 오름차순
+    </pre>
+    <script>
+        let fruits = ['apple','orange','mango'];
+        fruits.sort();
+        document.write(fruits);
+        document.write(fruits[1]);
+
+        let nums = [0, 50, 20, 40];
+        document.write(nums.sort());
+
+        fruits.sort(function(){
+            return -1;
+        });
+        console.log(fruits);
+    </script>
+    <h2>push</h2>
+    <pre>
+        배열의 마지막에 값 추가
+        배열.push('새값');
+    </pre>
+    <script>
+        fruits.push('grape');
+        document.write(fruits);
+    </script>
+    <h2>pop</h2>
+    <pre>
+        배열의 마지막에 값 제거
+        배열.pop();
+    </pre>
+    <script>
+        fruits.pop();
+        document.write(fruits);
+    </script>
+    <h2>unshift</h2>
+    <pre>
+        배열의 첫번째 추가
+        배열.unshift('새값');
+    </pre>
+    <script>
+        fruits.unshift('grape');
+        document.write(fruits);
+    </script>
+    <h2>shift</h2>
+    <pre>
+        첫번째 값 제거
+        배열.shift();
+    </pre>
+    <script>
+        fruits.shift();
+        document.write(fruits);
+    </script>
+    <h2>slice</h2>
+    <pre>
+        인덱스번호로 원소값을 추출(복사)
+        배열.slice(시작, 끝); 시작번호 부터 끝번호 앞자리까지
+    </pre>
+    <script>
+        let orgnums = [0,1,2,3,4,5,6];
+        let newnums = orgnums.slice(2,5);
+        document.write(newnums);
+        console.log(orgnums);
+    </script>
+    <h2>splice</h2>
+    <pre>
+        인덱스번호로 원소값을 추출(오려내기)
+        배열.splice(시작, 끝); 시작번호 부터 끝번호 앞자리까지
+    </pre>    
+    <script>
+        let newnums2 = orgnums.splice(0,4);
+        document.write(newnums2);
+        console.log(orgnums);
+    </script>
+    <h2>concat</h2>
+    <pre>
+        배열과 배열을 합체
+        배열.concat(배열);  //합칠대상 - 배열
+    </pre>
+    <script>
+        let fullstack = frontLangs.concat(backLangs);
+        document.write(fullstack);       
+        
+    </script>
+    <h2>filter</h2>
+    <pre>
+        조건에 맞는 값만 새 배열로 생성
+
+        배열.filter(function(매개변수){
+            return 매개변수...
+        })
+
+        매개변수는 배열의 각 값을 대변할 변수
+    </pre>
+    <script>
+        let $nums = [10,7,25,22,30];
+        let $filtered = $nums.filter(function(num){
+            return num % 5 == 0;
+        });
+        document.write($filtered);
+    </script>
+</body>
+
+</html>

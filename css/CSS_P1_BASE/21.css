@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto&display=swap');
+
+/* 
+@font-face {
+    font-family: 'nanum gothic';
+    src: url(fonts/NanumGothic.woff) format('woff');
+    src: url(fonts/NanumGothic.woff) format('truetype'); /* 대체 폰트 */
+}     
+*/
+
+body {
+    /* font-family: 'nanum gothic', dotum, helvetica , 'sans-serif'; */
+                                        /* helvetica : 맥 기본폰트*/
+    font-family: 'Nanum Gothic', sans-serif;
+    
+}
+h2 {
+    font-weight: 800;
+}
+.target {
+    font-family: 'Roboto', sans-serif;
+}
+

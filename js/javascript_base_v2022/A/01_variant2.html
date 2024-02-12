@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>산술 연산자 - 자바스크립트 기초</title>
+    <meta name="description" content="">
+    <meta name="author" content="user1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <pre>
+        +,-,*,/, %(나눈 나머지)
+    </pre>
+    <script>
+        let num1 = 100;
+        let num2 = 30;
+        console.log(num1+num2);
+        console.log(num1-num2);
+        console.log(num1*num2);
+        console.log(num1/num2);
+        console.log(num1%num2);
+    </script>
+    <h3>문자열 더하기</h3>
+    <script>
+        let str1 = '자바스크립트';
+        let str2 = '기초';
+        console.log(str1+str2); 
+        console.log(str1*str2); //NaN not a number
+    </script>
+    <pre>
+        '문자'+20 ->문자20
+        '문자'+20+20 ->문자2020
+         20+'문자' -> 20문자
+         20+30+'문자' -> 50문자
+         '1'+20 -> 120
+         20+'1' -> 201
+         20*'1' -> 20
+    </pre>
+    <script>
+        console.log('문자'+20);
+        console.log('문자'+20+20);
+        console.log(20+'문자');
+        console.log(20+30+'문자');
+        console.log('1'+20);
+        console.log(20+'1');
+        console.log(20*'1');
+    </script>
+    <h3>증감 연산자</h3>
+    <pre>
+        ++
+        --
+    </pre>
+    <script>
+        let i = 1;
+            // i = i+1;
+            // i++ 후치 나중에(뒤에)더한다.
+            // ++i 전치 미리 더한다.
+        
+        console.log(i++);//이 이후에 반영
+        console.log(i);
+        console.log(i);
+        let n = 1;
+        console.log(++n);//즉시 반영
+    </script>
+    <h3>복합대입연산자</h3>
+    <pre>
+        +=, -=, *=, /=, %=
+    </pre>
+    <script>
+        let y = 1;
+            // y = y + 1;
+            y+=1; //더한 결과
+        console.log(y);
+
+    </script>
+
+
+</body>
+
+</html>

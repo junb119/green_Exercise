@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Style</title>
+    <style>
+        ul {
+            /* list-style-type: none; */
+                /* square, disc, circle, none */
+        }
+        
+        /* nav > ul > li > ul > li > ul > {
+            list-style-type: disc;
+        } */
+        li li li {
+            list-style-type: disc;
+        }
+        ol {
+            list-style-type: '\1f44d';
+        }
+        .menu {
+            list-style-image: url('./img/bullet.png');
+            
+        }
+        .menu li {
+            font-size: 40px;
+            /* list-style-image 는 위치 조절 불가 -> 배경 처리로 위치 조정 */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>list style</h1>
+    <nav>
+        <ul>
+            <li>menu</li>
+            <li>menu
+                <ul>
+                    <li>sub menu</li>
+                    <li>sub menu
+                        <ul>
+                            <li>sub menu2</li>
+                            <li>sub menu2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>menu</li>
+            <li>menu</li>
+        </ul>
+    </nav>
+    <hr>
+    <ol>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ol>
+    <hr>
+    <ul class="menu">
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+</body>
+
+</html>

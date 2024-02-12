@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu li {
+  margin-top: 25px;
+}
+
+.menu a {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.4;
+  color: silver;
+  position: relative;
+}
+
+.menu a:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3498db;
+  width: 0;
+  /* height: 0; */
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.3s ease-in;
+}
+.menu a:hover:before {
+  width: 100%;
+}
+
+[data-animation="to-bottom"] a:before {
+  width: 100%;
+  height: 0;
+}
+
+[data-animation="to-bottom"] a:hover:before {
+  width: 100%;
+  height: 100%;
+}
+[data-animation="to-left"] a,
+[data-animation="to-top"] a {
+  color: #3498db;
+}
+
+[data-animation="to-left"] a:hover:before {
+  width: 0%;
+  /* color: silver; */
+}
+
+[data-animation="to-left"] a:before,
+[data-animation="to-top"] a:before {
+  width: 100%;
+  height: 100%;
+  color: silver;
+}
+
+[data-animation="to-top"] a:hover:before {
+  height: 0%;
+  /* color: silver; */
+}

@@ -1,0 +1,108 @@
+@charset 'utf-8';
+@import url(./normalize.css);
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Source+Sans+3:wght@300;400;700&display=swap');
+/* 
+font-family: 'Bitter', serif;
+font-family: 'Source Sans 3', sans-serif;
+*/
+
+/* layout */
+
+/* Logo */
+h1 {
+  
+}
+.logo a{
+  display: block;
+  width: 97px;
+  height: 48px;
+  text-indent: -9999em;
+  background: url('../images/logo.png') no-repeat;
+}
+/* typography */
+body {
+  font-size: 16px/24px 'Source Sans 3', sans-serif;
+  color:#2b2b2b
+}
+
+h2,h3,h4,h5,h6 {
+  font-family: 'Bitter', serif;
+  letter-spacing: -0.025em;
+}
+
+.heading1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.heading2 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 42px;
+}
+
+.heading3 {
+  font-size: 24px;
+}
+
+.heading4 {
+  font-size: 18px;
+}
+.heading5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.heading6 {
+  font-size: 14px;
+}
+
+p {
+  width: 571px;
+  
+
+}
+
+p a , p em {
+  color: #e54d42;
+}
+/* button */
+.btn {
+  display: inline-block;
+  font-family: 'Source Sans 3', sans-serif;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn.primary { 
+  width: 173px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #e54d42;
+  text-transform: uppercase;
+  padding: 0 24px;
+  font-weight: bold;
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.2)
+  
+}
+
+.btn.secondary {
+  width: 137px;
+  height: 32px;
+  line-height: 32px;
+  background-color:#252e38;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+
+/* form */
+
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: #ebebeb;
+  margin:3rem auto;
+}

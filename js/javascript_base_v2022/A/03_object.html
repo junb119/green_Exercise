@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Object</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <pre>
+    객체(변수 + 함수)
+    object = property + method
+
+    let 객체명 = {
+        변수명 : 값,
+        변수명 : 값,
+        변수명: 합계함수,
+        변수명: 평균함수
+        }          
+    </pre>
+    <script>
+        let st = {
+            kor:100,
+            eng:90,
+            math:90,
+            total:function(){
+                let sum = this.kor+this.eng+this.math
+                return sum;
+            },
+            avg:function(){
+                let sum = this.total()/3;
+                return sum;
+            },
+        }
+        console.log(st);
+        console.log(st.total());
+        console.log(st.avg());
+        document.write(st.kor);
+        document.write(st.total());
+    </script>
+</body>
+
+</html>

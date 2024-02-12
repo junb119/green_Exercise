@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete cookie</title>
+  <script>
+    function delcookie() {
+      let cookieName = 'company';
+      let cookieVal=  'abc';
+      let date = new Date() 
+    
+    date.setDate(date.getDate()-1);
+    document.cookie = `${cookieName}=${cookieVal};Expires=${date}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>쿠키삭제</h1>
+  <button id="del">Delete cookie</button>
+  <script>
+    document.querySelector('#del').addEventListener('click', ()=> {
+      delcookie();
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: green;
+            /* animation-name :changeBG;
+            animation-duration : 2s;
+            animation-delay : 1s;
+            animation-timing-function:ease;
+            animation-fill-mode :forwards;
+            animation-iteration-count: 5; */ /* transition에는 없음 */
+            /* 숫자 or infinite  */
+            /* animation-direction :reverse; */ /* transition에는 없음 */
+            animation-timing-function: linear;
+            
+        }
+        header:hover div{
+            animation: forwards changeBG 2s 1s ease infinite normal;
+        }
+
+        @keyframes changeBG {
+            /* from {}*/
+            0% {
+                background : green;
+                margin-left: 0;
+                /* margin-top: 0; */
+            }
+            25% {
+                background: silver;
+                margin-left: 100px;
+                margin-top: 0;
+            }
+            50% {
+                background: yellow;
+                margin-left: 100px;
+                margin-top: 100px;
+            }
+            75% {
+                background:blue;
+                margin-left: 0;
+                margin-top:100px;
+            }
+
+            /* to {} */
+            100% {
+                background : green;
+                margin-left: 0
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="box">box</div>
+    </header>
+    <hr>
+    <!--  
+        아래쪽으로 40px 내려가고 있고, 투명도 0
+        순차적으로(0.1s간격) 위로(원래위치)올라오고 투명도 1
+        조건: hr 움직이면 안된다.
+        애니메이션의 이름 fadeUp, 시간 0.5초
+    -->
+    <header>
+        <h2>Main title</h2>
+        <p>
+            description
+        </p>
+        <a href="">read more</a>
+    </header>
+    <hr>
+</body>
+
+</html>

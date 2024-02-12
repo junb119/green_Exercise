@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        div {
+            /* height: 200px; */
+            /* div 높이가 없으면 줄어들면서 버벅임 */
+        }
+        div img {
+            width: 200px;
+            opacity: .5;
+            transition-property:width;
+            transition-duration: .3s;
+            transition-delay: 0s;
+            transition-timing-function:cubic-bezier(.61,-1.21,.69,2.03);
+            
+            /* transition : 
+                width 0.3s 0s ease-in ,
+                opacity 0.3s 0s cubic-bezier(.61,-1.21,.69,2.03); */
+
+            /* transition : all 0.3s ease-in */
+
+            /* transition: .3s ease-in; */ /*여기에만 쓰면 양방향, hover에도 쓰면 역방향 */
+        }
+
+        div:hover img {
+            width: 400px;
+            /* opacity: 1; */
+            /* transition: .3s ease-in; */  /* 진행방향 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="imgs/sample1.jpg" alt="">
+    </div>
+    
+</body>
+
+</html>

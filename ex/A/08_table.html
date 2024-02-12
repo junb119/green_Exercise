@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table 표</title>
+  <style>
+    h1 {
+      color: blue;
+    }
+    th, td {
+      border : 1px solid #444
+    }
+    table {
+      border-collapse: collapse;
+      
+    }
+  </style>
+</head>
+<body>
+  <h1>표</h1>
+  <table>
+    <caption>
+      <h2>게시판</h2>
+      <p>자유롭게 글을 입력합니다.</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">구분</th>
+        <th scope="col">제목1</th>
+        <th scope="col">제목2</th>
+        <th scope="col">제목3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>data11</td>
+        <td>data12</td>
+        <td>data13</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>data21</td>
+        <td>data22</td>
+        <td>data23</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>data31</td>
+        <td>data32</td>
+        <td>data33</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>total</td>
+        <td>total1</td>
+        <td>total2</td>
+        <td>total3</td>
+      </tr>
+    </tfoot>
+
+  </table>
+  <hr>
+  <figure>
+    <figcaption>
+      <h2>게시판</h2>
+      <p>자유롭게 글을 입력합니다.</p>
+    </figcaption>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">구분</th>
+          <th scope="col">제목1</th>
+          <th scope="col">제목2</th>
+          <th scope="col">제목3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>data11</td>
+          <td>data12</td>
+          <td>data13</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>data21</td>
+          <td>data22</td>
+          <td>data23</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>data31</td>
+          <td>data32</td>
+          <td>data33</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>total</td>
+          <td>total1</td>
+          <td>total2</td>
+          <td>total3</td>
+        </tr>
+      </tfoot>
+  
+    </table>
+  </figure>
+  <hr>
+  <table>
+    <caption>
+      <h2>게시판</h2>
+      <p>자유롭게 글을 입력합니다.</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">구분</th>
+        <th scope="col">제목1</th>
+        <th scope="col">제목2</th>
+        <th scope="col">제목3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td colspan="2">data11</td>
+        <!-- <td>data12</td> -->
+        <td rowspan="3">data13</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>data21</td>
+        <td>data22</td>
+        <!-- <td >data23</td> -->
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>data31</td>
+        <td>data32</td>
+        <!-- <td>data33</td> -->
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>total</td>
+        <td>total1</td>
+        <td>total2</td>
+        <td>total3</td>
+      </tr>
+    </tfoot>
+
+  </table>
+</body>
+
+</html>

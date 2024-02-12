@@ -1,0 +1,47 @@
+body {
+  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  margin: 12px 0;
+}
+.card-container {
+  position:relative;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  margin:100px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;  
+  position: absolute;
+  transition: 1s;
+  transform: perspective(200px);
+  transform-style: preserve-3d; 
+  /* 부모요소의 transform적용 사항을 자식요소에서도 보존 
+    부모와 자식 둘다 transform을 적용할 때
+    transform-style: preserve-3d; 을 사용하지 않으면
+    자식의 transform은 부모의 transform을 계승하지 않고 홀로 적용됨.
+  */
+}
+.side {
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;   /* 뒷면 거림 */
+  
+
+}
+.back {
+  background:#eaeaed;
+  color:#0087cc;
+  text-align: center;
+  line-height: 150px;
+  transform: rotateY(180deg)
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+  
+}

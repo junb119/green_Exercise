@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="robots" content="index, follow">
+<title></title>	
+<link rel="stylesheet" href="css/main.css">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<style>
+  .video {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .video video {
+    width: 100%;
+  }
+  .video button{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 2em;
+    display: none;
+  }
+
+
+  .video button span:last-child{
+    display: none;
+  }
+  .video button.active span:last-child{
+    display: block;;
+  }
+  .video button.active span:first-child{
+    display: none;;
+  }
+  .progress {
+    width: 80%;
+    position: absolute;
+    left :0;
+    right: 0;
+    bottom: 10px;
+    border: 2px solid #fff;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+
+  }
+  .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    transition: width 0.3s;
+    background: #fff;
+  }
+  
+</style>
+</head>
+<body>
+
+<button id="aplay">Play music</button>
+<button id="apause">Pause music</button><br>
+<hr>
+<button id="vplay">Play video</button>
+<button id="vpause">Pause video</button>
+<div class="video">
+  <video src="video/vivaldi.mp4"></video>
+  <button>
+    <span>play</span>
+    <span>pause</span>
+  </button>
+  <div class="progress">
+    <div class="bar"></div>
+  </div>
+</div>
+
+<audio src="audio/Honey_Bee_01_web.mp3"></audio>
+
+<script>
+  const videoWrapper = document.querySelector('.video');
+  const video = document.querySelector('video');
+  const vplayBtn = document.querySelector('#vplay')
+  const vstopBtn = document.querySelector('#vpause')
+  const videoBtn = document.querySelector('.video button')
+  const progressBar = document.querySelector('.progress .bar')
+
+  const audio = document.querySelector('audio')
+  const aplayBtn = document.querySelector('#aplay')
+  const astopBtn = document.querySelector('#apause')
+
+  let timer
+  
+  vplayBtn.addEventListener('click', ()=> {
+    video.play();
+  })
+
+  vstopBtn.addEventListener('click', ()=> {
+    video.pause();
+  })
+
+  aplayBtn.addEventListener('click', ()=> {
+    audio.play();
+  })
+
+  astopBtn.addEventListener('click', ()=> {
+    audio.pause();
+  })
+
+
+  videoBtn.addEventListener('click', ()=> {
+    videoBtn.classList.toggle('active')
+
+
+
+    if(videoBtn.classList.contains('active')) {
+      video.play();
+      console.log(video.duration)
+      timer = setInterval(()=> {
+
+        let percent = video.currentTime/video.duration * 100
+        console.log(percent)
+
+
+        if(percent == 100) {
+          clearInterval(timer)
+        }
+        progressBar.style.width = `${percent}%`
+
+
+
+      },10)
+
+    } else {
+      video.pause();
+      clearInterval(timer)
+      video.currentTime = 0;
+      progressBar.style.width = 0
+    }
+  })
+
+  videoWrapper.addEventListener('mouseenter',()=> {
+    videoBtn.style.display = 'block';
+  })
+
+  videoWrapper.addEventListener('mouseleave', ()=> {
+    videoBtn.style.display = 'none';
+  })
+  
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

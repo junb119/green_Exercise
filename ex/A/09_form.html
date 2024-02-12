@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+<boy>
+  <h1>폼</h1>
+  
+<!-- 
+  <form novalidate> : 유효성 검사 방지 
+  <form action=""> : 데이터 받아 처리할 파일 경로
+    
+-->
+  <form action="10_login.html" method="post">
+    <input type="hidden" name="location" value="메인페이지">
+    <fieldset>
+      
+      <legend>필수 입력</legend>
+      <div>
+        <label for="username">이름 :</label>
+        <input type="text" name="username" id="username" required minlength="2" maxlength="5" autofocus>
+      </div>
+      
+      <p>
+        <label for="useremail">email :</label>
+        <input type="email" name="useremail" id="useremail" required>
+      </p>
+     
+      <p>
+        <label for="userpw">password :</label>
+        <input type="password" name="userpw" id="userpw" required>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>부가 입력</legend>
+      <p>
+        <label for="phone">연락처 : </label>
+        <input type="tel" id="phone" placeholder="010-0000-0000" pattern="[0-9]{2,3}-[0-9]{4}-[0-9]{4}" title="010-0000-0000에 맞춰 입력해주세요.">
+      </p>
+      <p>
+        <label for="birth"></label> 생년월일 :
+        <input type="date" id="birth" >
+      </p>
+      <p>
+        <label for="skill">언어 숙련도</label>
+        <input type="number" id="skill" value="5" min="0" max="10" step="2">
+      </p>
+      <p>
+        <label for="address">지역 : </label>
+        <select name="address" id="address" >
+          <option value="" selected disabled>선택해주세요</option>
+          <option value="서울시">서울시</option>
+          <option value="경기도">경기도</option>
+          <option value="제주도">제주도</option>
+          <option value="기타">기타</option>
+        </select>
+      </p>
+      <div>
+        <h3>기혼여부</h3>
+        <label for="married" name="married">기혼</label>
+        <input type="radio" id="married" name="married" value="기혼" >
+        <label for="unmarried" name="married">미혼</label>
+        <input type="radio" id="unmarried" name="married" value="미혼" checked>
+      </div>
+      <div>
+        <h3>관심사</h3>
+        <label for="sports">운동</label>
+        <input type="checkbox" id="sports" name="interest" value="운동">
+        <label for="game">게임</label>
+        <input type="checkbox" id="game" name="interest" value="게임">
+        
+        <p>
+          <label for="profile">프로필 : </label>
+          <input type="file" id="profile" accept="image/*">
+        </p>
+        <p>
+          <label for="msg">인사말 :</label>
+          <textarea name="msg" id="msg" cols="30" rows="5" placeholder="인삿말을 입력하세요."></textarea>
+
+        </p>
+      </div>
+    </fieldset>
+    <fieldset>
+      <p>
+        <legend>기타 타입</legend>
+        <label for="city">도시 : </label>
+        <input type="text" name="" id="city" list="citylist">
+        <datalist id="citylist">
+          <option value="서울시">
+          <option value="강릉시">
+          <option value="서귀포시">
+        </datalist>
+      </p>
+      <p>
+        <label for="color">색상 : </label>
+        <input type="color" id="color">
+      </p>
+      <p>
+        <label for="sns">sns : </label>
+        <input type="url" id="sns"> <!-- https로 시작하는 것만 입력가능-->
+      </p>
+      <p>
+        <label for="search">검색</label>
+        <input type="search" id="search" value="네이버" placeholder="검색해보세요">
+      </p>
+      <p>
+        <label for="range">범위</label>
+        <input type="range" id="range" min="0" max="5" value="1">
+      </p>
+    </fieldset>
+    <!-- <input type="submit" value="전송" > -->
+    <!-- <input type="image" src="./images/send.png" alt="전송"> -->
+
+    <!-- <button>
+      <input type="image" src="./images/send.png" alt="전송">
+    </button> -->
+    <!-- button 기본 타입 : submit -->
+    <button type="submit" disabled >전송</button>
+    <button type="reset">초기화</button>
+    <!-- <button type="button">중복 체크</button> -->
+
+  </form>
+</boy>
+
+</html>

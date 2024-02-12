@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+.testbox0, .testbox1, .testbox2, .testbox3 {float:left; margin:5px;}
+
+.testbox0 {
+	  border-style: solid;
+	  border-width: 0.7em 0.7em 0.7em 0.7em;
+	  border-color: #3498db transparent transparent transparent;
+	  width: 0em;  height: 0em;
+}
+.testbox1 {
+	  border-style: solid;
+	  border-width: 0.7em 0.7em 0.7em 0.7em;
+	  border-color: #3498db #ccc #ccc #ccc;
+	  width: 0em;  height: 0em;
+}
+.testbox2 {
+	  border-style: solid;
+	  border-width: 0.7em 0.7em 0.7em 0.7em;
+	  border-color: #3498db #ccc #ccc #ccc;
+	  width: 0.7em;  height: 0.7em;
+}
+.testbox3 {
+	  border-style: solid;
+	  border-width: 0.7em 0.7em 0.7em 0.7em;
+	  border-color: #3498db #ccc #ccc #ccc;
+	  width: 3em;  height: 3em;
+}
+
+
+	

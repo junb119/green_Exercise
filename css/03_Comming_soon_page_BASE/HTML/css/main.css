@@ -1,0 +1,286 @@
+@charset 'utf-8';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Plus&family=PT+Sans&display=swap");
+/* 
+font-family: 'Gentium Plus', serif;
+font-family: 'PT Sans', sans-serif;
+*/
+
+/* reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  vertical-align: top;
+}
+
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+button,
+input {
+  border: none;
+  background: none;
+  padding: 0;
+}
+.blind {
+  display: none;
+}
+
+/* Layout */
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.sec-pd {
+  padding: 48px 0;
+}
+header,
+.freebi,
+footer {
+  text-align: center;
+}
+hr {
+  margin: 48px auto;
+  width: 400px;
+  border: none;
+  /* 방법1 */
+  /* border-top: 1px solid #d1d6d4; */
+  /* 방법2 */
+  height: 1px;
+  background-color: #d1d6d4;
+}
+
+/* Typography */
+body {
+  font: 16px/24px "PT Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gentium Plus", serif;
+}
+.content-tt {
+  font-size: 24px;
+  text-align: center;
+}
+.content-tt:before {
+  content: "- ";
+}
+.content-tt:after {
+  content: " -";
+}
+
+body {
+  background: url("../images/light-bg.jpg");
+}
+
+/* header */
+/* quill 글씨 대신에 로고가 나오도록  */
+header {
+  background-color: #fff;
+}
+
+header h1 a {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  text-indent: -9999em;
+  background: url(../images/logo.png) no-repeat;
+}
+
+header h2 {
+  margin-top: 48px;
+  line-height: 48px;
+  font-size: 36px;
+  width: 507px;
+  color: #2f2f2f;
+  display: inline-block;
+}
+
+header p {
+  width: 598px;
+  font: 24px/34px "Gentium Plus", serif;
+  color: #626262;
+  /* display: inline-block; */
+  margin: 0 auto;
+}
+
+header p strong {
+  color: #f93f1c;
+}
+
+section.form {
+  background: url("../images/envelopes.png") no-repeat center,
+    url("../images/dark-bg.jpg");
+}
+
+.form form {
+  width: 307px;
+  margin: 0 auto;
+}
+
+.form form label {
+  display: none;
+}
+
+fieldset p {
+  width: 307px;
+}
+
+.form form input {
+  width: 100%;
+  height: 42px;
+  text-align: center;
+  background-color: #fff;
+  line-height: 42px;
+  color: #626262;
+}
+
+.form form input::-ms-placeholder {
+  color: #c3c3c3;
+}
+.form form input::-webkit-placeholder {
+  color: #c3c3c3;
+}
+.form form input::placeholder {
+  color: #c3c3c3;
+}
+
+fieldset p + p {
+  margin-top: 6px;
+}
+
+.form form input[type="submit"] {
+  background: #f93f1c;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.form form .msg {
+  margin: 30px 0 24px;
+  font-size: 14px;
+  font-style: italic;
+  color: #c3c3c3;
+}
+
+.progress h3 {
+  color: #626262;
+}
+
+.status-box {
+  margin-top: 48px;
+  padding: 15px;
+  background: url(../images/light-green-bg.jpg);
+}
+
+.bullon {
+  width: 0%;
+  height: 114px;
+  background-color: rgba(127, 158, 63, 0.7);
+  text-indent: -9999em;
+  float: left;
+  position: relative;
+  margin-right: 30px;
+}
+.bullon:hover {
+  width: 45%;
+  transition: 1s;
+}
+.bullon:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-width: 9px 11px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(127, 158, 63, 0.7);
+  position: absolute;
+  top: 14px;
+  left: 100%;
+}
+
+.desc {
+  width: 282px;
+  float: left;
+  color: #626262;
+}
+
+.desc h4 {
+  font-weight: bold;
+}
+
+.freebie {
+  background-color: #2f2f2f;
+  color: #c3c3c3;
+  text-align: center;
+}
+
+.freebie h3 {
+  color: #fff;
+}
+
+.freebie p {
+  width: 325px;
+  margin: 24px auto 48px;
+}
+
+.freebie p strong {
+  color: #f93f1c;
+}
+
+footer p:first-of-type {
+  width: 433px;
+  font: 24px/34px "Gentium Plus", serif;
+  margin: 0 auto 24px;
+  color: #626262;
+}
+
+footer p a {
+}
+.sns {
+  display: inline-block;
+  margin-bottom: 96px;
+}
+
+.sns li {
+  float: left;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin: 0 5px;
+}
+
+.sns li span {
+  line-height: 48px;
+  vertical-align: top;
+}
+
+.sns li a {
+  display: block;
+  background-color: #f93f1c;
+  color: #fff;
+}
+
+#back-to-top {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  position: fixed;
+  bottom: 170px;
+  left: calc(50% + 452px);
+}

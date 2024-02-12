@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class Selector</title>
+    <!-- 가상 클래스 선택자 -->
+    <style>
+        /* a{
+            text-decoration: none;
+        } */
+        :link {
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: blue;
+
+        }
+        h1:hover {
+            background-color: silver;
+            transition: 3s;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        :visited {
+            color: #ebebeb;
+        }
+        a, input, button {
+            outline:none;
+        }
+        a:focus{
+            background-color: blue;
+            color: #fff;
+        }
+        input:focus {
+            border-color: blue;
+        }
+        button:focus {
+            background-color: blue;
+            color: #fff;
+        }
+        p:focus-within{  /* p태그 안의 요소 포커싱 했을 때 p태그에도 적용  */
+            background-color: silver;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo-class Selector</h1>
+    <p>
+        <a href="#">link</a>
+        <a href="">link</a>
+        <a href="https://www.naver.com">naver</a>
+        <a href="https://abc.com">abc.com</a>
+    </p>
+    <form action="">
+        <p>
+            <label for="name">이름</label>
+            <input type="text" id="name">
+        </p>
+        <p>
+            <label for="email">이메일</label>
+            <input type="email" id="email">
+        </p>
+        
+        <button>send</button>
+    </form>
+</body>
+
+</html>

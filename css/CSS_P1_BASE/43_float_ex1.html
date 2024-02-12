@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float exercise1</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .portfolio_list {
+            width: 860px;
+            margin: 0 auto;
+            padding: 10px;
+            background: #ebebeb;
+            /* overflow:auto; */
+        }
+        .clearfix:after{
+            content :"";
+            display: block;
+            clear:left
+        }
+        /* 방법1 */
+        .portfolio_list li {
+            float : left;
+            margin-right : 20px
+        }
+        .portfolio_list li:last-child{
+            margin-right : 0
+        }
+        /*              /* 방법2 */ */
+        /*              .portfolio_list li:nth-child(-n+3){
+                        margin-right: 20px;
+                        } 
+        */
+                        /* 방법3 */
+        /*              .portfolio_list li + li {
+                        margin-left: 20px;
+                        } 
+        */
+        /* /대체 */
+
+        .menu {
+            background: green;
+        }
+        /* .menu:after{
+            content :"";
+            display: block;
+            clear:left
+        } */
+        .menu a {
+            color :#fff;
+            
+        }
+        .menu li {
+            float: left;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Portfolio List</h1>
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+    <ul class="portfolio_list clearfix">
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <!-- <div style="clear:left"></div> -->
+    </ul>
+    <hr>
+    <ul class="menu clearfix">
+        <li><a href="">list1</a></li>
+        <li><a href="">list2</a></li>
+        <li><a href="">list3</a></li>
+        <li><a href="">list4</a></li>
+    </ul>
+
+
+</body>
+
+</html>

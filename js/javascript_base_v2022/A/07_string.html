@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>String</title>
+</head>
+
+<body>
+    <h1>String</h1>
+    <pre>
+        "문자"
+        let 변수명 = "문"
+    </pre>
+    <h2>chartAt</h2>
+    <pre>
+        글자에서 인덱스 번호에 해당하는 글자파악.
+        대상.charAt(인덱스번호)
+    </pre>
+    <script>
+        let str = 'Hello world'
+        document.write(str.charAt(4))
+    </script>
+
+    <h2>IndexOf, Search</h2>
+    <pre>
+        문자에서 특정문자의 위치 반환. 없으면 -1
+        대상.indexOf(문자);
+        대상.search(문자)
+    </pre>
+    <script>
+        console.log(str.indexOf('world'))
+        console.log(str.indexOf('worlds'))
+        console.log(str.search('world'))
+        console.log(str.search('worlds'))
+    </script>
+
+    <h2>concat</h2>
+    <pre>
+        배열 + 배열
+        문자 + 문자
+        대상.concat(대상);
+    </pre>
+    <script>
+        let str1 = 'welcome universe'
+        let str2 = str.concat(str1);
+        document.write(str2)
+    </script>
+
+    <h2>replace</h2>
+    <pre>
+        교체한다.(원본 변경 x)
+        a.replace(b,c)
+        a에서 b를 c로 교체한다.
+    </pre>
+    <script>
+        let newstr = str.replace('Hello', 'bye') 
+        console.log(newstr);
+        console.log(str);
+    </script>
+
+    <h2>slice</h2>
+    <pre>
+        시작 ~ 끝번호 앞까지 복사(추출)
+        대상.slice(시작, 끝)
+        대상.slice(0,3)
+    </pre>
+    <script>
+        let slicedstr =str.slice(6,11);
+        console.log(slicedstr) // world 
+        console.log(str) // Hello world
+
+
+
+    </script>
+
+    <h2>split</h2>
+    <pre>
+        문자열 분리-> 배열 생성
+        대상.split('패턴')
+    </pre>
+    <script>
+        let weblang = 'html css javascript'
+        let weblangArr = weblang.split(' ') //['html', 'css', 'javascript']
+        console.log(weblangArr)
+        console.log(weblang)
+
+    </script>
+
+    <h2>length</h2>
+    <script>
+        document.write(str.length)
+    </script>
+
+
+</body>
+
+</html>

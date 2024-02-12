@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+li {
+  list-style : none;
+}
+
+.slide,
+.news,
+footer {
+  padding: 10px;
+  background: silver;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+.slidewrapper {
+  
+  position: relative;
+  background-color: silver;
+}
+.slide {
+  height: 500px;
+}
+
+.slidewrapper,
+.newswrapper {
+  margin-bottom: 30px;
+}
+
+.slideContainer {
+  position: relative;
+}
+.slideContainer:after,
+.newswrapper:after,
+.pager:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.slidewrapper button {
+  height: 40px;
+  position: absolute;
+  top: calc(50% + 20px);
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+  box-sizing: border-box;
+  border :none;
+}
+#prev {
+  left: 10px;
+}
+#next {
+  right: 10px;
+}
+.pager {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  left :0;
+  right:0;
+  word-spacing: 5px;
+}
+.pager a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  text-indent : -9999em;
+}
+.pager a.active {
+  background-color: #fff;
+  
+}
+
+a + a {
+  margin-left: 5px;
+}
+
+.newswrapper .news {
+  width: 465px;
+  float: left;
+}
+.newswrapper .news + .news {
+  margin-left: 30px;
+}
+
+footer {
+  height: 60px;
+}

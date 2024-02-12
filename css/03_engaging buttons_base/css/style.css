@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  line-height: 1.618em;
+  background: #2c3e50;
+}
+
+.wrapper {
+  max-width: 65rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 5rem;
+  text-align: center;
+  background: #fff;
+  border: 0.5rem solid #34495e;
+}
+
+hr {
+  border: 0;
+  border-bottom: 0.0625rem solid #bbb;
+  margin: 3rem 0;
+}
+
+button {
+  font-size: 2em;
+  background: #3498db;
+  color: #fff;
+  border: 0.25rem solid #3498db;
+  padding: 0.85em 0.75em;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+button:after{
+  content: '';
+  position: absolute;
+  background: #ecf0f1;
+  padding: 5px;
+  z-index: -1;
+  left:-1px;
+  right:-1px;
+  top:-1px;
+  bottom:-1px ;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+  
+
+}
+button:hover {
+  color:#3498db;
+}
+
+button.slide_from_left:after {
+  transform: translateX(-100%);
+}
+button.slide_from_right:after {
+  transform: translateX(100%);
+}
+button.slide_from_top:after {
+  transform: translateY(-100%);
+}
+button.slide_from_bottom:after {
+  transform: translateY(100%);
+}
+button[class^='slide']:hover:after {  
+  transform: none; 
+}
+
+
+button.grow_box:after {
+  transform: scale(0);
+}
+
+button.grow_box:hover:after {  
+  transform: scale(1);
+}
+
+button.grow_ellipse:after{
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+button.grow_ellipse:hover:after{
+  transform: scale(1.5);
+}
+
+button.grow_skew_forward:after{
+  transform: skewX(-45deg) scaleX(0);
+}
+button.grow_skew_forward:hover:after{
+  transform: skewX(-45deg) scale(1.5);
+}
+button.grow_skew_backward:after{
+  transform: skewX(45deg) scaleX(0);
+}
+button.grow_skew_backward:hover:after{
+  transform: skewX(45deg) scale(1.5);
+}
+button.grow_spin:after{
+  transform: rotate(0deg) scale(0);
+}
+button.grow_spin:hover:after{
+  transform: rotate(360deg) scale(1);
+}

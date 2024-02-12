@@ -1,0 +1,72 @@
+@charset 'utf-8';
+@maincolor : #333333;
+@titlecolor : (@maincolor - #222222);
+@linkcolor : (@maincolor + #222222);
+@mainfont : 12px;
+@titlefont : (@mainfont * 2);
+
+// .bordered {
+//     background:#ebebeb;
+//     border-radius: 5px;
+//     padding: 3px;
+    
+// }
+
+.rounded-corner(@radius:5px , @padding:3px) {
+    background:#ebebeb;
+    border-radius: @radius;
+    padding: @padding
+    
+}
+
+body {
+    color: @maincolor;
+    font-size: @mainfont;
+}
+h1 {
+    color : @titlecolor;
+    font-size: @titlefont;
+    .rounded-corner
+}
+
+a{
+    color:@linkcolor
+}
+
+#footer {
+    .rounded-corner(20px, 10px)
+}
+
+// #header {
+//     color: black;
+// }
+
+// #header nav {
+//     font-size: 16px;
+// }
+
+// #header nav a{
+// text-decoration :none;
+
+// }
+
+// #header nav a:hover{
+//     text-decoration: underline;
+// }
+
+
+#header {
+  color: black;
+  nav {
+    font-size: 16px;
+
+    a{
+      text-decoration : none;
+    
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+  }
+} 

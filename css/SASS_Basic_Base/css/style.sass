@@ -1,0 +1,25 @@
+$maincolor: #444444
+$titlecolor : #222222
+$radius : 5px
+
+=bordered-radius($radius,$padding)
+    background : #ebebeb
+    border-radius : $radius
+    padding: $padding
+
+
+body 
+    color : $maincolor
+
+h1 
+    color: $titlecolor
+    +bordered-radius(10px, 20px)
+#header 
+    color: black
+    nav
+        font-size : 16px
+        a
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC.com</title>
+  <script>
+
+
+  </script>
+</head>
+<body>
+  <h1>ABC corp.</h1>
+  <style>
+    .popup {
+      width: 150px;;
+      padding: 20px;
+      position : fixed;
+      left: 100px;
+      top: 100px;
+      box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+    }
+    .popup.hide {
+      display: none;
+    }
+  </style>
+  
+  <div class="popup">
+    <h2>반갑습니다.</h2>
+    <label for="check">하루 안보기</label>
+    <input type="checkbox" id="check">
+    <button>닫기</button>
+  </div>
+
+  <script>
+    const popup = document.querySelector('.popup');
+    const input = popup.querySelector('input');
+    const closeBtn = popup.querySelector('button');
+
+
+    closeBtn.addEventListener('click', ()=> {
+      popup.classList.add('hide')
+      if (input.checked) {
+        setCookie('company', 'ABC', 1);
+      } else {
+        delCookie('company');
+      }
+    })
+
+    function setCookie(name, value, day) {
+        let date = new Date();
+        date.setDate(date.getDate() + day)
+        document.cookie = `${name}=${value}; Expires=${date}`
+      }
+
+    function delCookie(name) {
+      let date = new Date()
+      date.setDate(date.getDate() - 1)
+      document.cookie = `${name}=''; Expires=${date}`
+    }
+
+    function checkCookie(name) {
+      let cookieArr = document.cookie.split(';')
+      let visited = false;
+
+      for (let cookie of cookieArr){
+        if (cookie.indexOf(name) > -1){
+          visited = true
+        }
+      }
+      if (visited) popup.classList.add('hide')
+      else popup.classList.remove('hide')
+    }
+    checkCookie('ABC')
+  </script>
+</body>
+</html>

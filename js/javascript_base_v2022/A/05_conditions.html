@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>conditions</title>
+</head>
+
+<body>
+    <h1>조건문</h1>
+    <pre>
+        if(조건){
+            참일 때 할일
+        } else {
+            거짓일 때 할일
+        }
+    </pre>
+    <script>
+        let a = 10;
+        let b = 20;
+        if(a<b){
+            document.write('a가 b보다 작다');
+        } 
+    </script>
+    <hr>
+    <script>
+        if(a>b){
+            document.write('a가 b보다 작다');
+        } else {
+            document.write('a가 b보다 크거나 같다');
+        }
+    </script>
+    <hr>
+    <h2>비교연산자 != </h2>
+    <script>
+        if(a>b){
+            document.write('a가 b보다 크다');
+        } else if(a != b){
+            document.write('a가 b는 같지 않다');
+        } else{
+            document.write('a가 b보다 작다');
+        }
+    </script>
+    <hr>
+    <h2>타입 비교</h2>
+    <pre>
+        != 두값의 타입비교하지 않는다.
+        == 두값의 타입비교하지 않는다.
+
+        === 데이터타입 비교한다. 
+        !==
+
+        string 
+        number
+        array
+        object
+        function
+
+        typeof(대상)
+    </pre>
+    <script>
+
+
+        // if(1 == "1"){
+        //     document.write('같다');
+        // }
+        console.log(typeof("1"));
+
+        if(1 === "1"){
+            document.write('같다');
+        }
+    </script>
+    <hr>
+    <h2>중첩 조건문</h2>
+
+    <script>
+        if(a !== b){
+            if(a>b){
+                document.write('크다');
+            }else{
+                document.write('작다');
+            }
+        } else{
+            document.write('같다');
+        }
+    </script>
+    <h2>조건문의 축약</h2>
+    <script>
+        /*
+        if(a>b){
+            document.write('a가 b보다 작다');
+        } else {
+            document.write('a가 b보다 크거나 같다');
+        }
+
+        //중괄호 생략
+        if(a>b)
+            document.write('a가 b보다 작다');
+        else 
+            document.write('a가 b보다 크거나 같다');
+        */
+        //반말, react,vue
+        (a<b) ? document.write('a가 b보다 작다'):document.write('a가 b보다 크거나 같다');
+
+    </script>
+
+    <h2>논리연산자</h2>
+    <pre>
+       a && b      a,b두조건 참이면 참
+       a || b      a,b두조건중 하나라도 참이면 참
+    </pre>
+    <script>
+        let c = 30;
+
+        if(a<b || b===c){
+            document.write('a가 b보다 작고, b가 c보다 작다');
+        }else{
+
+        }
+    </script>
+
+    <h2>switch</h2>
+    <pre>
+        switch(조건){
+            case 1:
+                할일
+                break;
+            case 2:
+                할일
+                break;
+            case 3:
+                할일
+                break;       
+            default:
+                할일
+                break;         
+        }
+    </pre>
+    <script>
+        let number = prompt('숫자를 입력하세요',0);
+        console.log(number);
+        switch(number % 2){
+            case 0:
+                alert('짝수입니다.');
+                break;
+            case 1:
+                alert('홀수입니다.');
+                break;
+            default:
+                alert('숫자를 입력하세요');
+                break;
+        }
+    </script>
+</body>
+
+</html>
