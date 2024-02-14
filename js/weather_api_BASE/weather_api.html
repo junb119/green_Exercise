@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Weather</title>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+  </head>
+  <script>
+    let url =
+      "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=56ec0c673cf18fa8e7828129fe8de2f2&units=metric";
+
+    fetch(url)
+      .then((response) => response.json()) // 결과 받기
+      .then((data) => {
+        // 결과를 data 객체에 저장.
+        console.log(data);
+        document.querySelector(".ctemp").append(data.main.temp);
+        document.querySelector(".clowtemp").append(data.main.temp_min);
+        document.querySelector(".chightemp").append(data.main.temp_max);
+        let icon = data.weather[0].icon;
+        console.log(icon);
+        let src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+        document.querySelector(
+          ".cicon"
+        ).innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="">`;
+      });
+  </script>
+  <body>
+    <h1>날씨 정보</h1>
+    <h2>현재 날씨</h2>
+    <div class="ctemp">현재 온도:</div>
+    <div class="clowtemp">최저 온도:</div>
+    <div class="chightemp">최고 온도:</div>
+    <div class="cicon">아이콘 :</div>
+    <hr />
+    <h2>날씨 예보</h2>
+    <p>3-hour Forecast 5 days</p>
+
+    <!-- HTML -->
+  </body>
+</html>
