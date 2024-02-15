@@ -3,11 +3,22 @@
     <title>Weather</title>
     <meta charset="utf-8" />
     <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td,th{
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
   </head>
   <script>
     let url =
       "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=56ec0c673cf18fa8e7828129fe8de2f2&units=metric";
-
+    let forcastUrl =
+      "https://api.openweathermap.org/data/2.5/forecast?q=seoul&appid=56ec0c673cf18fa8e7828129fe8de2f2&units=metric";
+    
     fetch(url)
       .then((response) => response.json()) // 결과 받기
       .then((data) => {
@@ -23,6 +34,29 @@
           ".cicon"
         ).innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="">`;
       });
+    fetch(forcastUrl)
+      .then((response) => response.json()) // 결과 받기
+      .then((data) => {
+        console.log(data.list)
+        let tableTag = ''
+        for (let li of data.list) {
+          let ctime = new Date(li.dt*1000)
+          let m = `0${ctime.getMonth()+1}`.substr(-2);
+          let d = `0${ctime.getDate()}`.substr(-2);
+          let h = `0${ctime.getHours()}`.substr(-2);
+          let time = `${ctime.getFullYear()}/${m}/${d} ${h}시`
+
+          tableTag += 
+          `<tr>
+            <td>${time}</td>
+            <td>${li.main.temp}</td>
+            <td>${li.main.temp_max}</td>
+            <td>${li.main.temp_min}</td>
+            <td>${li.weather[0].description}</td>
+          </tr>`
+        }
+        document.querySelector('table tbody').innerHTML = tableTag
+      });
   </script>
   <body>
     <h1>날씨 정보</h1>
@@ -34,7 +68,26 @@
     <hr />
     <h2>날씨 예보</h2>
     <p>3-hour Forecast 5 days</p>
-
+    <table>
+      <thead>
+        <tr>
+          <td>시간</td>
+          <td>온도</td>
+          <td>최고온도</td>
+          <td>최저온도</td>
+          <td>날씨 정보</td>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
+      </tbody>
+    </table>
     <!-- HTML -->
   </body>
 </html>
