@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.10/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        let popup =document.querySelector('dialog')
+        var calendar = new FullCalendar.Calendar(calendarEl, {        
+          initialView: 'dayGridMonth',
+          googleCalendarApiKey: 'AIzaSyBM6MQ7FryWehvuHGL-bDoqnPh8IjIwEmA',
+            events: {
+              googleCalendarId: 'f6411b7d5ea1c7716f4689023a972961b4d1d85d7052b746d6fb7c947fd9c648@group.calendar.google.com'
+            },
+          eventClick: function(info) {
+            info.jsEvent.preventDefault(); // don't let the browser navigate
+            
+            popup.querySelector('div').innerHTML=`
+              <h3>${info.event.title}</h3>
+              <div>${info.event.extendedProps.description}</div>
+            `
+
+            popup.setAttribute('open','open');
+          }
+        });
+        calendar.render();
+
+        popup.querySelector('button').addEventListener('click', (e)=> {
+          popup.removeAttribute('open');
+        })
+      });
+
+    </script>
+    <style>
+      dialog {
+        position: fixed;
+        width: 300px;
+        margin: 0;
+        z-index: 100;
+        padding: 30px;
+        background: #fff;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+        border: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='calendar'></div>
+    <dialog>
+      <div>제목</div>
+      <button>닫기</button>
+    </dialog>
+  </body>
+</html>
+
+
+<!-- f6411b7d5ea1c7716f4689023a972961b4d1d85d7052b746d6fb7c947fd9c648@group.calendar.google.com
+ 
+googleCalendarApiKey: '<YOUR API KEY>',
+events: {
+  googleCalendarId: 'abcd1234@group.calendar.google.com'
+}
+-->
