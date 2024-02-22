@@ -1,0 +1,101 @@
+body, html { margin: 0; }
+
+body {
+	background-color: #333;
+	color: #79776a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+}
+
+p { line-height: 1.4em; }
+
+h1,h2,h3 {
+	font-family: 'Libre Baskerville', serif;
+}
+
+h2 {
+	font-size: 26px;
+	margin-top: 4px;
+}
+
+button {
+	border: 1px solid #999;
+	border-radius: 4px;
+	background-color: transparent;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 6px 14px;
+	color: #79776a;
+	margin-top: 10px;
+}
+
+.container {
+	background-color: #fff;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.section1,.section2,.section3,.section4 { display: grid; }
+
+/* SECTION 1 */
+.section1 {
+	grid-template-columns: 42fr 125fr 30fr 53fr 750fr;
+	grid-template-rows: 43px auto 55px auto auto;
+}
+
+.section1_bg{
+ grid-column: 1/-1;
+ grid-row: 1/-1;
+}
+.logo {
+	grid-column: 2/span 2;
+	grid-row: 2;
+}
+
+.year {
+	grid-column: 3/span 2;
+	grid-row: 4;
+}
+
+.section2 {
+	margin-top: -310px;
+	grid-template-columns: 49fr 15fr 305fr 89fr 126fr 80fr 86fr 250fr;
+	grid-template-rows: 87px 29px auto auto auto auto;
+
+}
+
+.skier{
+	grid-column: -3/ span 2 ;
+	grid-row: -3/ span 2;
+}
+.section2-bg{
+	grid-column: 1/-2 ;
+	grid-row: 2/-2;
+}
+.lookbook{
+	grid-column: 2 ;
+	grid-row: 1/ span 3;
+}
+.title-btn{
+	grid-column: 4/span 2 ;
+	grid-row: 3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.section2-text {
+	grid-column: 5/ span 2;
+	grid-row: 4 / span 2;
+	padding-top: 22px;
+}
+
+
+.section2-text h3 {
+	grid-column: 4;
+	grid-row: -4;
+}
+
+.section2-text p {
+	grid-column: -4/span 2;
+	grid-row: 4/span 2;
+}
