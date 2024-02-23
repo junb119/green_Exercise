@@ -1,0 +1,32 @@
+body {  background-color: #f7fafd; }
+.countdown{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+#clock {
+  padding: 0 20%;
+  text-align: center;
+  margin-top: 20px;
+  border: none;
+  box-shadow: 0 0 10px rgba(96,134,181,.3);
+}
+
+.clock-section { display: inline-block; }
+
+.clock-section .value {
+  height: 100px;
+  line-height: 100px;
+  background-color: #333;
+  text-align: center;
+  border-radius: 10px;
+  padding:0 20px;
+}
+.value {
+  font-size: 50px;
+}
+.clock-label {
+  text-align: center;
+  padding-top: 4px;
+  font-size: 11px;
+}

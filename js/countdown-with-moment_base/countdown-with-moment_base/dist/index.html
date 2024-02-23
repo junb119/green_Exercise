@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Countdown with Moment_base</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="countdown">
+  <div id="clock" class="card card-default">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Countdown to </h2><span data-date="12/25/2024"></span>
+      <div class="clock-section">
+        <div id="days" class="value text-warning">00</div>
+        <div class="clock-label">DAYS</div>
+      </div>
+      <div class="clock-section">
+        <div id="hours" class="value text-warning">00</div>
+        <div class="clock-label">HOURS</div>
+      </div>
+      <div class="clock-section">
+        <div id="minutes" class="value text-warning">00</div>
+        <div class="clock-label">MINUTES</div>
+      </div>
+      <div class="clock-section">
+        <div id="seconds" class="value text-warning">00</div>
+        <div class="clock-label">SECONDS</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='./moment.js'></script>
+<script src="moment-with-locales.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

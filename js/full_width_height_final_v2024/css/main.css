@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* Base */
+html { height: 100%; }
+body { height: 100%; }
+.scene { 
+    height : 100%; 
+}
+.scene img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+.scene video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+.scene iframe{
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    max-width: 1140px;
+    width:90%;
+    margin:0 auto;
+}
+main section{
+    padding:108px 0;    
+}
+
