@@ -6,4 +6,5 @@
 #tab-content {min-height: 300px;}
 #tab-content > div {display: none;}
 
+.tab-menu li.ui-tabs-active,
 .tab-menu li a.active{background: #000;color: #fff;}
