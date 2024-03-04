@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson  - Modernizr</title>
+	
+	<script src="./modernizr-custom.js"></script>
+
+	<style>
+		img {
+			vertical-align: top;
+		}
+		.target {
+			-webkit-box-reflect: below;
+		}
+
+		.alt-target{
+			display: none;
+		}
+
+		.no-cssreflections .alt-target {
+			display: block;
+			transform: rotateX(180deg);
+			
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<img src="images/demo-image.jpg" alt="" class="target">
+	<img src="images/demo-image.jpg" alt="" class="alt-target">
+
+<script>
+	if (!Modernizr.cssreflections) {
+  // not-supported
+	// alert('귀하의 브라우저는 기능 지원 X')
+} 
+</script>
+</body>
+</html>
