@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>비회원 주문</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="jquery.number.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+<h1>주문하기</h1>
+	
+<form action="#" method="get">
+	<fieldset>
+		<legend>주문자 정보</legend>
+		<p>
+			<label for="username">성명</label>
+			<input type="text" name="ordername" id="username" value="" placeholder="주문자명">			
+		</p>
+		<p>
+			<label for="useremail">이메일</label>
+			<input type="text" name="yourmail" class="email_name" value=""> @
+			<input type="text" name="domain" class="email_domain" value="" readonly>
+		
+			<select class="select_domain">
+				<option value="직접입력">직접입력</option>
+				<option value="daum.net">daum</option>
+				<option value="naver.com">naver</option>
+				<option value="gmail.com">gmail</option>
+				<option value="yahoo.com">yahoo</option>
+			</select>
+			<button>전송</button>
+
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>주문정보</legend>
+		<p>
+			<span>i pad mini 64GB</span>
+			<span class="unitprice number">400000</span>원
+			<span>
+				<a href="#" id="minus"> - </a> / 
+				<a href="#" id="plus"> + </a>
+				개수: <em class="count number">1</em>
+			</span>
+			합계 : 
+			<span class="total number">
+				400000
+			</span>원
+		</p>
+		<p>
+		</p>
+	</fieldset>	
+</form>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
