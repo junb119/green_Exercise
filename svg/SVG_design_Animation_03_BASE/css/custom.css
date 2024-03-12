@@ -1,0 +1,98 @@
+h1, h2, h3, p {
+	font-family:'Source Sans Pro';
+	font-weight: 300;
+}
+.clearfix { clear:both; }
+p {
+	font-size:1.2em;
+}
+
+h1, h2, h3 {
+	font-size:3em;
+}
+
+#blue-container {
+	background:#000 url(../images/bg.png) repeat-x;
+	padding: 120px 0;
+}
+
+#gray-container {
+	background:#fff url(../images/bg2.png);
+	padding: 120px 0;
+	margin-top:310px;
+}
+
+
+.alc {
+	text-align:center;
+}
+
+h1 {
+	color:#fff;
+}
+
+.notepads {
+	margin-top: 40px;
+	position: relative;
+	height: 260px;
+}
+
+.notepads img,
+.notepads svg {
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#bigpad{
+	left:0;top:0;
+}
+
+#smallpad{
+	right:50px;bottom: 8px;
+}
+
+.notepads.active #bigpad{
+	left:70px; opacity: 1;
+}
+.notepads.active #smallpad{
+	right:150px; opacity: 1;
+}
+
+
+.st0{fill:#E6E7E8;}
+.st1{fill:#231F20;}
+.st2{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+.st3{fill:none;stroke:#BCBEC0;stroke-width:4;stroke-miterlimit:10;}
+.st4{fill:#231F20;stroke:#000000;stroke-width:9;stroke-miterlimit:10;
+	stroke-dasharray: 96px;
+	stroke-dashoffset: 96px;
+	
+}	
+.active .st4{
+	animation : line .5s linear forwards;
+}
+@keyframes line {
+	0% {
+		stroke-dashoffset: 96px;
+	} 
+	100% {
+		stroke-dashoffset: 0px;
+	}
+}
+
+#line1 {
+	animation-delay: .1s;
+}
+#line2 {
+	animation-delay: .2s;
+}
+#line3 {
+	animation-delay: .3s;
+}
+#line4 {
+	animation-delay: .4s;
+}
+#line5 {
+	animation-delay: .5s;
+}

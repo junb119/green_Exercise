@@ -1,0 +1,27 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve" id="PencilShape">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:9;stroke-miterlimit:10;}
+	.st1{stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+}
+
+</style>
+
+<g id="Container">
+	<circle class="st0" cx="150" cy="150" r="126"/>
+</g>
+<g id="Pencil">
+	<g id="Pencil">
+		<polygon id="PencilShape" class="st1" points="81,218.127 122.751,218.127 195.814,145.063 206.252,145.063 206.252,134.626 
+			216.689,134.626 216.689,124.188 227.127,113.751 185.376,72 174.939,82.437 164.501,82.437 164.501,92.875 154.063,92.875 
+			154.063,103.313 81,176.376 		"/>
+	</g>
+</g>
+<g id="Details">
+	<line class="st2" x1="180.158" y1="139.845" x2="117.532" y2="202.47"/>
+	<line class="st2" x1="81" y1="197.252" x2="101.875" y2="218.127"/>
+	<line class="st2" x1="154.063" y1="103.313" x2="169.72" y2="118.969"/>
+	<line class="st2" x1="164.501" y1="92.875" x2="180.158" y2="108.532"/>
+	<line class="st2" x1="216.689" y1="124.188" x2="185.376" y2="92.875"/>
+</g>
+</svg>

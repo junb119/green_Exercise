@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG circle animation</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .charts{
+      width: 80%;
+      margin:2rem auto;
+      display: flex;
+      justify-content: center;
+      gap:20px;
+      .chart{
+        position: relative;
+        h2{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform:translate(-50%,-50%);
+        }
+      }
+    }
+    svg{
+      width: 220px;
+      height: 220px;
+      
+    }
+    circle{
+      stroke-width: 20;
+      fill:#ebebeb;
+      stroke-dasharray: 628px;
+      stroke-dashoffset: 628px;
+      transform-origin: 50% 50%;
+      transform: rotate(-90deg);
+      stroke-linecap: round;
+      
+    }
+
+
+    .chart:nth-child(1) circle {stroke:#ffc114;}
+    .chart:nth-child(2) circle {stroke:#ff5248;}
+    .chart:nth-child(3) circle {stroke:#19cdca;}
+    .chart:nth-child(4) circle {stroke:#4e80e1;}
+    
+    section {
+        height:80vh;
+      }
+  </style>
+</head>
+<body>
+  <section>
+    section
+  </section>
+  <section>
+    section
+  </section>
+  <div class="charts">
+    <div class="chart">
+      <h2 data-num="20">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100"></circle>
+      </svg>
+    </div>
+    <div class="chart">
+      <h2 data-num="60">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100"></circle>
+      </svg>
+    </div>
+    <div class="chart">
+      <h2 data-num="80">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100"></circle>
+      </svg>
+    </div>
+    <div class="chart">
+      <h2 data-num="10">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100"></circle>
+      </svg>
+    </div>
+  </div>
+  <section>
+    section
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+    let chart = $('.chart');
+    let excuted = false
+    $(window).scroll(function () {
+      let sct = $(this).scrollTop()
+      if (sct >= chart.offset().top - $(window).height() / 2) {
+        if (!excuted){
+          startAnimation()
+          excuted = true
+        }
+      }
+    }) 
+
+    function startAnimation() {
+      chart.each(function() {
+      let target = $(this).find('h2')
+      let circle = $(this).find('circle')
+      let targetNum = target.attr('data-num')
+
+      
+      $({num : 0}).stop().animate({num : targetNum}, {
+        duration: 1500,
+        progress: function () {
+          let now = Math.floor(this.num)
+          let offset = 628 - 628 * (now / 100)
+          target.text(now)
+          circle.css({strokeDashoffset :  offset + 'px' })
+        }
+      })
+      })
+    }
+    
+    
+  </script>
+</body>
+</html>
+

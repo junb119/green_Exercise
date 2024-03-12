@@ -1,0 +1,31 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
+	 height="300px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:12;stroke-miterlimit:10; stroke-dasharray: 800; 
+	animation : dash 2s linear forwards;
+	}
+	@keyframes dash {
+		from {
+			stroke-dashoffset:800
+		}
+		to {
+			stroke-dashoffset:0
+		}
+	}
+
+	
+</style>
+<g id="Pencil">
+	<polygon id="PencilShape" class="st0" points="30.829,270 101.735,270 225.82,145.914 243.547,145.914 243.547,128.188 
+		261.273,128.188 261.273,110.461 279,92.735 208.094,21.829 190.367,39.555 172.641,39.555 172.641,57.282 154.914,57.282 
+		154.914,75.008 30.829,199.094 	"/>
+</g>
+<g id="Details">
+	<line class="st0" x1="199.231" y1="137.051" x2="92.872" y2="243.41"/>
+	<line class="st0" x1="30.829" y1="234.547" x2="66.282" y2="270"/>
+	<line class="st0" x1="154.914" y1="75.008" x2="181.504" y2="101.598"/>
+	<line class="st0" x1="172.641" y1="57.282" x2="199.231" y2="83.872"/>
+	<line class="st0" x1="261.273" y1="110.461" x2="208.094" y2="57.282"/>
+</g>
+</svg>
