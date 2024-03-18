@@ -1,0 +1,51 @@
+/* BANNER */
+.banner{
+  padding-top: calc(var(--base) * 3);
+  background: var(--banner-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:calc(var(--base) * 2);
+}
+.banner h3{
+  color: var(--white);
+}
+.features{
+  gap:24px;
+}
+.features article{
+  text-align: center;
+}
+.features .circle{
+  width: calc(var(--base) * 4);
+  height: calc(var(--base) * 4);
+  border:1px solid var(--light-blue);
+  box-sizing: border-box;
+  border-radius:50%;
+  margin:0 auto var(--base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--font) * 2);
+  color: var(--light-blue);
+}
+.features h3{
+  margin-bottom:var(--base);
+  font-size: calc(var(--font) * 1.5);
+}
+/* testimonial slide */
+.slidecontainer blockquote{
+  width:65%;
+  margin:0 auto;
+  color: var(--light-blue, #439CCF);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 40.5px;
+  text-align: center;
+}
+.slidecontainer small{
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--light-blue, #439CCF);
+}

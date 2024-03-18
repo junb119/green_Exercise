@@ -1,0 +1,7 @@
+{
+  "name": "lesson_retina_js",
+  "version": "1.0.0",
+  "dependencies": {
+  	"retina.js": "latest"
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>FitVids.js</title>
+
+	<style>
+		.container {
+			width: 70%;
+			margin: 2em auto;
+		}
+		.container video {
+			width: 100%;
+		}
+		.container-2{
+			width: 70%;
+			margin: 2em auto;
+
+			div {
+				position: relative;
+				padding-top: 56.25%;
+				iframe {
+					width: 100%;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.container-3 {
+			width: 70%;
+			margin: 2em auto;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<div class="container">
+		<video src="video/vivaldi.mp4"></video>
+	</div>
+
+	<div class="container-2">
+		<div>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Qww41lsd4-w?si=oZFAyJ6z60yFXcY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="container-2">
+		<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/440193219?h=cb45d17538&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+		<p><a href="https://vimeo.com/440193219">Vivaldi/Elgar/Mozart</a> from <a href="https://vimeo.com/user22454561">Dallas Symphony Orchestra</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+	</div>
+
+	<div class="container-3">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Qww41lsd4-w?si=oZFAyJ6z60yFXcY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+	<!-- Add Bower components -->
+	<script src="jquery.min.js"></script>
+	<!-- <script src="fitvids.js"></script> -->
+	<script src="jquery.fitvids.js"></script>
+	<script>
+		$(".container-3").fitVids();
+	</script>
+
+</body>
+</html>

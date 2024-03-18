@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - acme</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/sign.css">
+</head>
+<body>
+  <header>
+    <div class="container d_flex jcc">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="logo">
+          <span>acme</span>
+        </a></h1>
+    </div>
+  </header>
+  <main>
+    <section class="banner form sec_pd">
+      <h2 class="banner_title">create your free account</h2>
+      <form action="#" method="post" novalidate>
+        <div class="field">
+          <label for="name">name</label>
+          <span class="material-symbols-outlined">person</span>
+          <input type="text" name="name" id="name" placeholder="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <span class="material-symbols-outlined">mail</span>
+          <input type="email" name="email" id="email" placeholder="Email address" required>
+        </div>
+        <div class="field">
+          <label for="password">password</label>
+          <span class="material-symbols-outlined">lock</span>
+          <input type="password" name="password" id="password" placeholder="Password" required>
+        </div>
+        <div class="field">
+          <label for="passwordcf">password confirm</label>
+          <span class="material-symbols-outlined">lock</span>
+          <input type="password" name="password" id="passwordcf" placeholder="password confirm" required>
+        </div>
+        <input type="submit" value="create account">      
+        <div class="feedback">
+          <p>Oops, it seems you haven't entered your name yet.</p>
+          <p>This is required.</p>
+        </div>
+      </form>
+
+    </section>
+  </main>
+  <footer>
+    <section class="cta sec_pd">
+      <a href="" class="highlight">Already have an account? Sign In</a>
+    </section>   
+  </footer>
+
+  <a href="#" id="btt" title="back to top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+  <script src="./js/common.js"></script>  
+  <script src="./js/sign.js"></script>
+</body>
+</html>

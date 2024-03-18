@@ -1,0 +1,83 @@
+.form label{
+  display: none;
+}
+.form form{
+  width: 350px;
+  margin:0 auto;
+  position: relative;
+}
+.form form .field{
+  padding: 0 20px;
+  background: var(--white);
+  border-radius:3px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap:10px;
+  color: var(--medium-gray);  
+}
+.form form .field span{
+  font-size: var(--font);
+}
+.form form .field input{
+  font-style:italic;
+  color: var(--body-text);
+}
+.form form .field:focus-within{
+  box-shadow: 0px 0px 5px 0px rgba(45, 62, 79, 0.90) inset;
+}
+.form form .field input::placeholder{
+  color: var(--medium-gray);  
+}
+.form form input{
+  background:none;
+  width: 100%;  
+  display: block;
+  height: calc(var(--base) * 2);
+  border:none; 
+}
+
+.form input[type="submit"]{
+  border:1px solid var(--white);
+  color:var(--white);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.form > p {
+  margin-top: calc(var(--base) * 3);
+}
+.cta {
+  background: none;
+}
+.cta .section_title{
+  color:var(--body-text);
+}
+.feedback{
+  width: 262px;
+  background: var(--white);
+  padding: 20px;
+  color: #f00000;
+  border-radius:3px;  
+  position: absolute;
+  left:calc(100% + 50px);
+  top:0;
+  text-align: left;
+  display: none;
+}
+.feedback p + p {
+  margin-top: var(--base);
+}
+.feedback:after{
+  content:'';
+  position: absolute;
+  right: 100%;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-style:solid;
+  border-width:6px 10px;
+  border-color:transparent var(--white) transparent transparent;
+}
+.form .banner_title {
+  margin-bottom: calc(var(--base) * 3);
+}

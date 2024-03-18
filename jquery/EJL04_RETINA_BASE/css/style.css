@@ -1,0 +1,11 @@
+.demo-container {
+  width: 500px;
+  height: 333px;
+  /* background: url(../images/image.jpg) no-repeat 0 0/100% 100%; */
+}
+/*-webkit-device-pixel-ratio */
+/* @media (min-resolution:2dppx) {
+  .demo-container {
+    background: url(../images/image@2x.jpg) no-repeat;
+  }
+} */

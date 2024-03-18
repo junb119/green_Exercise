@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 4 - jQuery Validation</title>
+	<style>
+		.field {
+			position: relative;
+		}
+		span.bad {
+			background: #3498db;
+			color: #fff;
+			position: absolute;
+			margin-left: 50px;
+			padding:5px 8px;
+			border-radius: 7px;
+			opacity: 0;
+			animation : fadein .5s linear forwards;
+		}
+
+		span.bad:before {
+			content: '';
+			border-style: solid;
+			border-width: 7px;
+			border-color: transparent #3498db transparent transparent;
+			position: absolute;
+			right: 100%;
+			top:50%;
+			transform: translateY(-50%);
+		}
+
+		@keyframes fadein {
+			0% {
+				opacity: 0;
+				margin-left: 50px;
+			}
+			100%{
+				opacity: 1;
+				margin-left: 20px;
+			}
+			
+		}
+	</style>
+
+</head>
+<body>
+	<form action="#" method="post" novalidate>
+		<fieldset>
+			<legend>Message Form</legend>
+			<div class="field">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="username" minlength="2" required>
+			</div>
+			<div class="field">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="useremail" required>
+			</div>
+			<div class="field">
+				<label for="msg">Message</label>
+				<textarea name="msg" id="msg" cols="30" rows="10" required></textarea>
+			</div>
+			<button>전송</button>
+		</fieldset>
+	</form>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script>
+		$("form").validate({
+			
+  rules: {
+    // simple rule, converted to {required:true}
+    username: {
+			required:true,
+			minlength: 2
+		},
+    // compound rule
+    useremail: {
+      required: true,
+      email: true
+    }
+  },
+	messages: {
+    username: {
+      required: "이름은 필수",
+      minlength: jQuery.validator.format("적어도 최소 {0} 글자수 이상 입력!")
+    },
+		useremail: {
+      required: "이메일도 필수",
+    	email: "이메일 형식을 지켜주세요."
+    }
+  },
+	errorClass:'bad',
+	errorElement: "span"
+}
+
+		);
+	</script>
+</body>
+</html>
