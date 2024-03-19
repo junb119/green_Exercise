@@ -5,8 +5,10 @@
 	<meta charset="utf-8">
 	<title>Bx slider</title>
 	
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -135,15 +137,65 @@
 	<hr/>
 	
 	<h2>멀티플 자동 슬라이드 구현</h2>
-	
+	<div class="slidewrapper">
+		<ul class="multiple_auto_slide">
+			<li>
+				<img src="./images/img-1.jpg" alt=""></li>
+			<li>
+				<img src="./images/img-2.jpg" alt=""></li>
+			<li>
+				<img src="./images/img-3.jpg" alt=""></li>
+			<li>
+				<img src="./images/img-4.jpg" alt=""></li>
+		</ul>
+	</div>
 	<hr/>
 	
 	<h2>동영상 슬라이드 </h2>
-	
+	<div class="slidewrapper">
+		<ul class="movie_slide">
+			<li><video src="video/vivaldi.mp4" muted></video></li>
+			<li><video src="video/vivaldi.mp4" muted></video></li>
+			<li><img src="./images/img-3.jpg" alt=""></li>
+			<li><img src="./images/img-4.jpg" alt=""></li>
+		</ul>
+	</div>
 	<hr/>
 	
 	<h2>탭 + 슬라이드 연동 </h2>
-	
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Tab 1</a></li>
+			<li><a href="#tabs-2">Tab 2</a></li>
+			<li><a href="#tabs-3">Tab 3</a></li>
+		</ul>
+		<div id="tabs-1">
+			<div class="slidewrapper">
+				<ul class="tab_slide">
+					<li><img src="./images/img-1.jpg" alt=""></li>
+					<li><img src="./images/img-2.jpg" alt=""></li>
+					<li><img src="./images/img-3.jpg" alt=""></li>
+					<li><img src="./images/img-4.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="tabs-2">
+			<ul class="tab_slide">
+				<li><img src="./images/img-1.jpg" alt=""></li>
+				<li><img src="./images/img-2.jpg" alt=""></li>
+				<li><img src="./images/img-3.jpg" alt=""></li>
+				<li><img src="./images/img-4.jpg" alt=""></li>
+			</ul>
+		</div>
+		<div id="tabs-3">
+			<ul class="tab_slide">
+				<li><img src="./images/img-1.jpg" alt=""></li>
+				<li><img src="./images/img-2.jpg" alt=""></li>
+				<li><img src="./images/img-3.jpg" alt=""></li>
+				<li><img src="./images/img-4.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
 	<hr/>		
 	
 </body>

@@ -56,11 +56,11 @@ $(function(){
 	});
 	/* ---------- 옵션 활용 슬라이드 ---------- */
 	$('.option_slide').bxSlider({
-		speed : 500,
+		
 		mode : 'horizontal',
 		randomStart : true,
 		infiniteLoop : true,
-		// easing : 'ease-out-bounce',
+		easing : '0.7 0 24 6',
 		auto :true,
 		autoHover:true,
 		autoControls:true
@@ -72,12 +72,45 @@ $(function(){
 
 
 	/* ---------- 멀티플 자동 슬라이드 ---------- */
-
+	$('.multiple_auto_slide').bxSlider({
+		auto:true,
+		autoHover:true,
+		autocontrols:true,
+		minSlides : 2,
+		maxSlides : 3,
+		slideWidth : 300,
+		moveSlides : 1,
+		pager : false,
+		slideMargin : 20,
+		speed : 200
+	}
+	)
 
 	/* ---------- 동영상 제어하기 ---------- */
+	$('.movie_slide').bxSlider({
+		pager:false,
+		onSliderLoad : function (currentIndex) {
+			
+			// $('.movie_slide video').removeClass('active')
+			$('.movie_slide video').get(0).pause()
+			$('.movie_slide video').eq(0).get(0).play()
+		},
+		onSlideAfter : function($slideElement) {
+			// console.log('d',$slideElement)
+			
+			$slideElement.find('video').get(0).play()
+			// $slideElement.addClass('active').siblings().removeClass('active')
+		}
+
+	})
+	
 
 	
-	
+
+
+	$('.tab_slide').bxSlider() // 순서바꾸면 작동x
+	$('#tabs').tabs();
+
 //document ready jquery 
 
 
