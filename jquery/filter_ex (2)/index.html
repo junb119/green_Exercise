@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filter and Sorting</title>
+  <title>Filter and Sorting </title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Filter &amp; Sorting</h1>
+  <h1>Filter &amp; Sorting - mixitup</h1>
   <div class="btns">
     <div class="buttons">
-      <button type="button" data-filter="*">All</button>
+      <button type="button" data-filter="all">All</button>
       <button type="button" data-filter=".web">web</button>
       <button type="button" data-filter=".mobile">mobile</button>
       <button type="button" data-filter=".app">app</button>
@@ -18,7 +18,7 @@
       <button type="button" data-filter=".print">print</button>
     </div>
     <select name="" id="filter">
-      <option value="*">All</option>
+      <option value="all">All</option>
       <option value=".web">web</option>
       <option value=".mobile">mobile</option>
       <option value=".app">app</option>
@@ -27,8 +27,9 @@
     </select>
   </div>
   <div class="sorting">
-    <button data-sort="asc">ascending</button>
-    <button data-sort="desc">descending</button>
+    <button data-sort="order:asc">ascending</button>
+    <button data-sort="order:descending">descending</button>
+    <button data-sort="random">random</button>
   </div>
 
   <ul class="product_list">
@@ -50,6 +51,10 @@
   </ul>
   <!-- <script src="script.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="script2.js"></script>
+  <!-- <script src="script2.js"></script> -->
+
+  <script src="mixitup.min.js"></script>
+  <script src="script_mixitup.js"></script>
+
 </body>
 </html>

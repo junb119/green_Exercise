@@ -17,11 +17,11 @@ sortBtns.click(function (e) {
 
 function mySorting(arr, direction){
   
-  if(direction === 'asc'){
+  if(direction === 'order:asc'){
     arr.sort(function(a,b){
       return $(a).attr('data-order') - $(b).attr('data-order');
     });
-  } else if(direction === 'desc'){
+  } else if(direction === 'order:descending'){
     arr.sort(function(a,b){
       return $(b).attr('data-order') - $(a).attr('data-order');
     });
@@ -45,7 +45,7 @@ btns.click(function(){
 function myfilter(tc){
   itemUl.html(items)
   
-  if(tc === '*'){
+  if(tc === 'all'){
     items.show()
     // items.each(function() {
     //   $(this).css({display :'block'})

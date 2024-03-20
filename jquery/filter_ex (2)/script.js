@@ -18,11 +18,11 @@ for(let sb of sortBtns){
 }
 function mySorting(arr, direction){
   
-  if(direction === 'asc'){
+  if(direction === 'order:asc'){
     arr.sort(function(a,b){
       return a.getAttribute('data-order') - b.getAttribute('data-order');
     });
-  } else if(direction === 'desc'){
+  } else if(direction === 'order:descending'){
     arr.sort(function(a,b){
       return b.getAttribute('data-order') - a.getAttribute('data-order');
     });
@@ -65,7 +65,7 @@ function myfilter(tc){
     itemUl.appendChild(items[i]);
    }
 
-  if(tc === '*'){
+  if(tc === 'all'){
     for(let item of items){
       item.style.display = 'block';
     }
