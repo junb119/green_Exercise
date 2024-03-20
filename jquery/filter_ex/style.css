@@ -1,0 +1,35 @@
+.product_list{
+  max-width: 800px;
+  width: 80%;
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product_list li {
+  padding: 20px 10px;
+  border: 5px solid #ebebeb;
+  width: 21.25%;
+  box-sizing: border-box;
+  position: relative;
+}
+.product_list li:after {
+  content: attr(data-order);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ccc;
+  color: #000;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}

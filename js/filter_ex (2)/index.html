@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter and Sorting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Filter &amp; Sorting</h1>
+  <div class="btns">
+    <div class="buttons">
+      <button type="button" data-filter="*">All</button>
+      <button type="button" data-filter=".web">web</button>
+      <button type="button" data-filter=".mobile">mobile</button>
+      <button type="button" data-filter=".app">app</button>
+      <button type="button" data-filter=".webapp">web app</button>
+      <button type="button" data-filter=".print">print</button>
+    </div>
+    <select name="" id="filter">
+      <option value="*">All</option>
+      <option value=".web">web</option>
+      <option value=".mobile">mobile</option>
+      <option value=".app">app</option>
+      <option value=".webapp">web app</option>
+      <option value=".print">print</option>
+    </select>
+  </div>
+  <div class="sorting">
+    <button data-sort="asc">ascending</button>
+    <button data-sort="desc">descending</button>
+  </div>
+
+  <ul class="product_list">
+    <li class="item web" data-order="1">web</li>
+    <li class="item mobile"  data-order="2">mobile</li>
+    <li class="item app" data-order="3">app</li>
+    <li class="item webapp" data-order="4">web app</li>
+    <li class="item print" data-order="5">print</li>
+    <li class="item web" data-order="6">web</li>
+    <li class="item mobile" data-order="7">mobile</li>
+    <li class="item app" data-order="8">app</li>
+    <li class="item webapp" data-order="9">web app</li>
+    <li class="item print" data-order="10">print</li>
+    <li class="item web" data-order="11">web</li>
+    <li class="item mobile" data-order="12">mobile</li>
+    <li class="item app" data-order="13">app</li>
+    <li class="item webapp" data-order="14">web app</li>
+    <li class="item print" data-order="15">print</li>
+  </ul>
+  <script src="script.js"></script>
+</body>
+</html>
