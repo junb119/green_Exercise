@@ -1,0 +1,80 @@
+/*
+	General styles
+*/
+body {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	background-color: #c7e1ff;
+	font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body, html {
+	height: 100%
+}
+/*
+	colors
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.blue {
+	background-color: #3883d8;
+}
+.turqoise {
+	background-color: #38ced7;
+}
+.brown {
+	background-color: #a66f28;
+}
+.bordeaux {
+	background-color: #953543;
+}
+.skin {
+	background-color: #ED9F4C;
+}
+.black {
+	background-color: #000000;
+}
+.white {
+	background-color: #FFFFFF;
+}
+.red {
+	background-color: #cf3535;
+}
+.green {
+	background-color: #22d659;
+}
+.orange {
+	background-color: #ea6300;
+}
+
+
+#section-wipes {
+	height: 100%;
+	width: 100%;
+	background-image: none;
+}
+.panel {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4em;
+	color: #fff;
+}
+
+
+.slidemenu{
+	position: fixed;
+	left: 100px;
+	top: 50%;
+	transform:translateY(-50%);
+	z-index: 100;
+	font-size: 3em;	
+}
+.slidemenu a{
+	color:#fff;
+}
