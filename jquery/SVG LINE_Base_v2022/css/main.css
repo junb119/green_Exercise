@@ -1,0 +1,10 @@
+section{
+    height: 100vh;
+}
+.st0{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-miterlimit:10;}
+
+section svg{
+    width: 30%;
+    display: block;
+    margin:0 auto;
+}

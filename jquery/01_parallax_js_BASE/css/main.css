@@ -1,0 +1,15 @@
+.navbar {
+    border-radius: 0;
+}
+
+.image-text {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+.parallax{
+    height: 50vh;
+}
+
+.parallax.bg1 {
+    padding-top: 100px;
+}
