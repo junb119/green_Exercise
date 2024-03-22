@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tab-status">
+      <span class="tab active"role="tab">1</span>
+      <span class="tab"role="tab">2</span>
+      <span class="tab"role="tab">3</span>
+    </div>
+    <form action="#">
+      <div role="tablist"> <!-- role 속성 -->
+        <div class="tabpanel" role="tabpanel" id="color">
+          <h3><label for="favorite_color">좋아하는 색상은?</label></h3>
+          <textarea name="color" id="favorite_color" cols="30" rows="5"></textarea>
+        </div>
+        <div class="tabpanel hidden" role="tabpanel" id="interest">
+          <h3><label for="hobby">취미는 무엇인가요?</label></h3>
+          <textarea name="hobby" id="hobby" cols="30" rows="5"></textarea>
+        </div>
+        <div class="tabpanel hidden" role="tabpanel" id="job">
+          <h3><label for="occupation">당신의 직업은?</label></h3>
+          <textarea name="occupation" id="occupation" cols="30" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="pagination">
+        <button type="button" class="btn hidden" id="prev">Previous</button>
+        <button type="button" class="btn" id="next">Continue</button>
+        <button type="button" class="btn hidden" id="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
