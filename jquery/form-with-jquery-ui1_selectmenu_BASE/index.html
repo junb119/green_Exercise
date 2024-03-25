@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Form Elements With jQuery UI #1</title>
-  
-  
   <link rel='stylesheet prefetch' href='http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
-
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="container">
+  <div id="progress">
+    <div class="percent">
+      <div>
+        <span>0</span> % completed
+      </div>
+    </div>
+  </div>
+
   <form>
     <h1>jQuery UI Form Elements</h1>
     <div class="ui-widgets">
@@ -31,7 +34,7 @@
         </optgroup>
       </select>
     </div>
-  </form>
+  
   <div class="ui-widgets">
     <label for="category">category</label>
     <input class="ui-corner-all ui-button" type="text" id="category">
@@ -40,6 +43,23 @@
     <label for="experience">How many years of experience do you have?</label>
     <input type="text" id="experience">
   </div>
+  <div class="ui-widgets">
+    <label for="date">When can you start?</label>
+    <input type="text" id="date">
+  </div>
+  <div class="ui-widgets">
+    <fieldset>
+      <legend>How did you hear about us?</legend>
+      <label for="internet">Internet</label>
+      <input type="radio" id="internet" value="internet" name="referrer">
+      <label for="tv">tv</label>
+      <input type="radio" id="tv" value="tv" name="referrer">
+      <label for="other">other</label>
+      <input type="radio" id="other" value="other" name="referrer">
+    </fieldset>
+  </div>
+  <button id="submit">Submit</button>
+  </form>
 </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>

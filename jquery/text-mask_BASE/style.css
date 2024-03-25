@@ -1,0 +1,39 @@
+:root {
+  --crop : 0%;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.parent_wrapper{
+  height: 1000px;
+  margin-bottom: 400px;
+}
+.parent{
+  position: sticky;
+  top: 100px;
+}
+
+.parent .section{
+  padding: 50px;
+  font-size: 3em;
+}
+
+section{
+  height: 50vh;
+  padding: 50px;
+}
+
+.sec2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  color: #fff;
+  background: url(https://assets.codepen.io/485050/photo-1621955964441-c173e01c135b.jpg) no-repeat 0 0 / cover;
+  height: 50vh;
+  clip-path: polygon(0 calc(100% - var(--crop, 100%)), 100% calc(100% - var(--crop, 100%)) ,100% 100% ,0 100%);
+}
