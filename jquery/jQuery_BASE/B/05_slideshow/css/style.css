@@ -14,27 +14,28 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 600px;
+    
 }
 
 .slide-container {
-    position: absolute;
-    width: 100%;
     height:100%;
     margin:0;
     padding: 0;
+    display: flex;
 }
 
 .slide-container>li {
-    position: absolute;
     top: 0%;
-    height: 100%;
+    height: 600px;
     width: 100%;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide1 {
@@ -59,13 +60,6 @@ body {
 
 .slide6 {
     background-image: url(../images/slide_06.jpg)
-}
-
-.slide-container>li .contents {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .slide-container>li .contents>* {

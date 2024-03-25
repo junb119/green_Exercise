@@ -7,28 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript vs. jQuery</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', ()=> {
-            document.querySelector('h1').style.color = 'blue'
-        })
-        // $(document).ready(function () {
-        //     $('h1').css({color:'red',textDecoration:'underline'});    
-        // })
-        // $(function () {
-        //     $('h1').css({color:'red',textDecoration:'underline'});    
-        // })
-    </script>
-
+    
 </head>
 
 <body>
     <h1>DOM Manipulation</h1>
-    <script>
-        // document.querySelector('h1').style.color = 'blue'
-        
-        // jquery
-        // ${선택자}.css({속성:값, 속성:값,})
-        $('h1').css({color:'red',textDecoration:'underline'});
+    <script>        
+        /*
+        document.addEventListener('DOMContentLoaded',()=>{
+
+            document.querySelector('h1').style.color = 'blue';
+        });
+        */
+       /*
+       $(document).ready(function(){
+           //$(선택자).css({속성:값, 속성:값});
+           $('h1').css({color:'blue'});
+       });
+      
+       $(function(){
+           //$(선택자).css({속성:값, 속성:값});
+           $('h1').css({color:'blue'});
+       });
+        */
+
+        //$(선택자).css({속성:값, 속성:값});
+        $('h1').css({color:'blue'});
     </script>
 </body>
 

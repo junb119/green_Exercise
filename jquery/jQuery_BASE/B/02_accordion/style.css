@@ -6,8 +6,8 @@
 	border-bottom:2px solid #ccc;
 	transition:0.35s;
 }
-.question.ui-state-active,
-.question.active{
+.question.active,
+.question.ui-state-active{
 	border-bottom:2px solid #3498db;
 }
 .question .fa{
@@ -15,8 +15,7 @@
 	transition:0.35s;
 }
 .question.active .fa,
-.question.ui-state-active .fa
-{
+.question.ui-state-active .fa{
 	transform:rotate(90deg);
 }
 
