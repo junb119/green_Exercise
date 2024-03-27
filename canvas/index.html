@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas</title>
+  <style>
+    canvas {
+      width: 500px;height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="area"></canvas>
+  <script>
+    let target = document.querySelector('#area');
+    if (target.getContext) {
+      let draw = target.getContext('2d');
+      console.log(draw);
+      draw.beginPath();
+      draw.moveTo(100,100);
+      draw.lineTo(400,100);
+      draw.lineWidth = 10;
+      draw.lineCap = 'round'
+      draw.strokeStyle = 'green';
+      draw.stroke();
+      console.log(draw);
+
+      draw.beginPath();
+      draw.moveTo(100,130);
+      draw.lineTo(400,130);
+      draw.lineWidth = 5;
+      draw.lineCap = 'round'
+      draw.strokeStyle = 'blue';
+      draw.stroke();
+      
+      draw.beginPath();
+      draw.moveTo(100,100);
+      draw.lineTo(200,50);
+      draw.lineTo(400,100);
+      draw.lineWidth = 5;
+      draw.lineCap = 'round'
+      draw.strokeStyle = 'blue';
+      draw.stroke();
+    } else {
+      alert('canvas를 지원하지 않습니다.')
+    }
+  </script>
+</body>
+</html>
