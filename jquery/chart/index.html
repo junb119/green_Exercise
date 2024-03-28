@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>chart</title>
-  </head>
-  <body>
-    <h1>chart.js</h1>
-    <h2>Line chart</h2>
-    <div class="'line-chart"><canvas id="line-chart"></canvas></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>chart.js</h1>
+  <h2>Line chart</h2>
+  
+  <div class="chart">
+    <canvas id="line-chart"></canvas>
+  </div>
+  <hr>
+  <h2>Bar chart</h2>
+  <div class="chart">
+    <canvas id="bar-chart"></canvas>
+  </div>
+  <hr>
+  <h2>Pie chart</h2>
+  <div class="chart">
+    <canvas id="pie-chart"></canvas>
+  </div>
+  <hr>
+  <h2>Pie chart-dark</h2>
+  <div class="chart dark">
+    <canvas id="pie-chart-dark"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
