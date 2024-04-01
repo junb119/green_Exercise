@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파일 업로드</title>
+    <style>
+      #profile {
+        display: none;
+      }
+      #uploadBtn {
+        background: #ebebeb;
+        border-radius: 4px;
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+
+      form > div {
+        margin-bottom: 10px;
+      }
+      #fileinfo {
+        width: 300px;
+        height: 40px;
+        display: inline-block;
+        border-bottom: 1px dotted #ccc;
+        vertical-align: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>파일 업로드</h2>
+    <form action="">
+      <div>
+        <label for="name">name</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="profile">profile</label>
+        <input type="file" id="profile" name="profile" />
+        <span id="fileinfo"></span>
+        <span id="uploadBtn">파일첨부</span>
+      </div>
+      <button>전송</button>
+    </form>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let fileHiddenBtn = $('#profile');
+      let fileUploadBtn = $('#uploadBtn');
+      fileUploadBtn.click(function () {
+        fileHiddenBtn.trigger('click');
+      });
+      fileHiddenBtn.change(function () {
+        let file = fileHiddenBtn.prop('files');
+        $('#fileinfo').text(file[0].name); // 파일의 이름 용량, 확장자 등을 조회가능. 업로드 파일 제한 등에 사용
+      });
+    </script>
+  </body>
+</html>

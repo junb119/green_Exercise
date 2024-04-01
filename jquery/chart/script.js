@@ -95,7 +95,6 @@ new Chart(barChart, {
     maintainAspectRatio: false,
   },
 });
-
 new Chart(pieChartDark, {
   type: 'doughnut',
   data: {
@@ -109,7 +108,7 @@ new Chart(pieChartDark, {
     ],
   },
   options: {
-    cutout : '30%',
+    cutout: '30%',
     maintainAspectRatio: false,
     plugins: {
       legend: {
@@ -135,5 +134,4 @@ new Chart(pieChart, {
   },
 });
 
-
-Chart.defaults.font.style ='italic'
+Chart.defaults.font.style = 'italic';
