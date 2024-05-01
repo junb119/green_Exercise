@@ -1,108 +1,82 @@
 $(function () {
-    let container = $('#gallery'),
-        loadmoreBtn = $('#load-more'),
-        addItemCount = 10, //클릭시 표시될 개수
-        added = 0, //표시된 개수
-        allData = [];  
-  
-  
-        let bodyHeight = 0;
-        let documentHeight = 0;
-        container.masonry({
-            // options
-            itemSelector: '.item',
-            columnWidth: 270
-        });
-  
-  
-        $.getJSON('https://dummyjson.com/products', initGallery);
-  
-  
-        function initGallery(result){
-          console.log(result);
-          allData = result.products;
-          console.log(allData)
-          addItems(); //10개씩 추가  
-         
-                 
-        }
+  let container = $('#gallery'),
+    loadmoreBtn = $('#load-more'),
+    addItemCount = 10, //클릭시 표시될 개수
+    added = 0, //표시된 개수
+    allData = [];
 
+  let bodyHeight = 0;
+  let documentHeight = 0;
+  container.masonry({
+    // options
+    itemSelector: '.item',
+    columnWidth: 270,
+  });
 
+  $.getJSON('https://dummyjson.com/products', initGallery);
 
+  function initGallery(result) {
+    console.log(result);
+    allData = result.products;
+    console.log(allData);
+    addItems(); //10개씩 추가
+  }
 
-        
-  
-        let excuted = false;
-  
-  
-        $(window).scroll(()=>{
-          let currentScroll = $(window).scrollTop();        
-          if(documentHeight - bodyHeight - 50 <= currentScroll){
-            if(!excuted){
-              addItems();
-              excuted = true;
-              setTimeout(()=>{
-                excuted = false;
-              },500)
-            }
-          }
-  
-  
-        })
-  
-  
-  
-  
-        function addItems(){
-          let listHtml = '';
-          let elements = []
-          let slicedData = allData.slice(added, added + addItemCount);
-          console.log(slicedData);
-          // added = added + addItemCount;
-          added += addItemCount;
-          //<li>A Day in the Life</li>, forEach
-          /*
+  let excuted = false;
+
+  $(window).scroll(() => {
+    let currentScroll = $(window).scrollTop();
+    if (documentHeight - bodyHeight - 50 <= currentScroll) {
+      if (!excuted) {
+        addItems();
+        excuted = true;
+        setTimeout(() => {
+          excuted = false;
+        }, 500);
+      }
+    }
+  });
+
+  function addItems() {
+    let listHtml = '';
+    let elements = [];
+    let slicedData = allData.slice(added, added + addItemCount);
+    console.log(slicedData);
+    // added = added + addItemCount;
+    added += addItemCount;
+    //<li>A Day in the Life</li>, forEach
+    /*
           slicedData.forEach(item=>{
             listHtml +=`<li>${item.title}</li>`;
           });
           */
-          $.each( slicedData, function(idx,item) {
-            listHtml =`<li class="item">
+    $.each(slicedData, function (idx, item) {
+      listHtml = `<li class="item">
               <h2>${item.brand}</h2>
               <img src="${item.thumbnail}" alt="${item.title}">        
             </li>
             `;
-            elements.push($(listHtml).get(0))
-          });
+      elements.push($(listHtml).get(0));
+    });
 
-          container.append($(elements));
-          // if(added === allData.length) { loadmoreBtn.hide();}
-          added >= allData.length ? loadmoreBtn.hide() :loadmoreBtn.show() ;
-  
-  
-          setTimeout(()=>{
-            bodyHeight = $(window).outerHeight();
-            documentHeight = $(document).outerHeight();
-            console.log(bodyHeight, documentHeight);
-          }, 300)
-                 
+    container.append($(elements));
+    // if(added === allData.length) { loadmoreBtn.hide();}
+    added >= allData.length ? loadmoreBtn.hide() : loadmoreBtn.show();
 
-          container.imagesLoaded( function() {
-            // images have loaded
-              container.masonry( 'appended', elements )
+    setTimeout(() => {
+      bodyHeight = $(window).outerHeight();
+      documentHeight = $(document).outerHeight();
+      console.log(bodyHeight, documentHeight);
+    }, 300);
 
+    container.imagesLoaded(function () {
+      // images have loaded
+      container.masonry('appended', elements);
+    });
+  } //additem()
+  loadmoreBtn.click(addItems);
 
-          });
-          
-          
-        } //additem()
-        loadmoreBtn.click(addItems);
-    
-  
-  
-  
-  
-        /*
+  /*
         loadItems();
         async function loadItems() {
           const response = await fetch("./data/content.json");
@@ -110,11 +84,4 @@ $(function () {
           console.log(data);
         }
         */
-  
-  
-  
-  
-  });
-  
-  
-  
+});

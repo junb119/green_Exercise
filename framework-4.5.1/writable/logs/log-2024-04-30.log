@@ -1,0 +1,62 @@
+CRITICAL - 2024-04-30 01:07:12 --> Error: Call to undefined function App\Controllers\render()
+[Method: GET, Route: board]
+in APPPATH\Controllers\Board.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Board->list()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\jun\\green\\Exercise\\framework-4.5.1\\public\\index.php')
+ERROR - 2024-04-30 02:14:29 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'boardci4'@'localhost' (using password: YES) in E:\jun\green\Exercise\framework-4.5.1\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 E:\jun\green\Exercise\framework-4.5.1\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'boardci4', Object(SensitiveParameterValue), 'boardci4', 3306, '', 0)
+#1 E:\jun\green\Exercise\framework-4.5.1\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\jun\green\Exercise\framework-4.5.1\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\jun\green\Exercise\framework-4.5.1\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\jun\green\Exercise\framework-4.5.1\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\jun\green\Exercise\framework-4.5.1\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\jun\green\Exercise\framework-4.5.1\app\Controllers\Board.php(17): CodeIgniter\BaseModel->findAll()
+#7 E:\jun\green\Exercise\framework-4.5.1\system\CodeIgniter.php(933): App\Controllers\Board->list()
+#8 E:\jun\green\Exercise\framework-4.5.1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#9 E:\jun\green\Exercise\framework-4.5.1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\jun\green\Exercise\framework-4.5.1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 E:\jun\green\Exercise\framework-4.5.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 E:\jun\green\Exercise\framework-4.5.1\public\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 E:\jun\green\Exercise\framework-4.5.1\system\Commands\Server\rewrite.php(49): require_once('E:\\jun\\green\\Ex...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in E:\jun\green\Exercise\framework-4.5.1\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 E:\jun\green\Exercise\framework-4.5.1\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\jun\green\Exercise\framework-4.5.1\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\jun\green\Exercise\framework-4.5.1\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\jun\green\Exercise\framework-4.5.1\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\jun\green\Exercise\framework-4.5.1\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 E:\jun\green\Exercise\framework-4.5.1\app\Controllers\Board.php(17): CodeIgniter\BaseModel->findAll()
+#6 E:\jun\green\Exercise\framework-4.5.1\system\CodeIgniter.php(933): App\Controllers\Board->list()
+#7 E:\jun\green\Exercise\framework-4.5.1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#8 E:\jun\green\Exercise\framework-4.5.1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\jun\green\Exercise\framework-4.5.1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 E:\jun\green\Exercise\framework-4.5.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\jun\green\Exercise\framework-4.5.1\public\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 E:\jun\green\Exercise\framework-4.5.1\system\Commands\Server\rewrite.php(49): require_once('E:\\jun\\green\\Ex...')
+#13 {main}
+CRITICAL - 2024-04-30 02:14:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: board/]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `board`
+ORDER BY `bid` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Board.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Board->list()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\jun\\green\\Exercise\\framework-4.5.1\\public\\index.php')
