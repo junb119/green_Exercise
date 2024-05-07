@@ -13,6 +13,17 @@
       <a href="/">home</a>
       <a href="/board">board</a>
       <a href="/board/write">글쓰기</a>
+        <?php
+        if(isset($_SESSION['userid'])) {
+        ?>
+          <a href="/logout" class="btn btn-warning">logout</a>
+          <?php
+        } else {
+          ?>
+          <a href="/login" class="btn btn-warning">login</a>
+          <?php
+        }
+        ?>
     </div>
   </header>
 

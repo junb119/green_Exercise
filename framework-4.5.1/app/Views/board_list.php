@@ -17,7 +17,7 @@
     ?>
     <tr>
       <td><?=$ls->bid;?></th>
-      <td><?=$ls->userid;?></td>
+      <td><?=$ls->username;?></td>
       <td><a href="/boardView/<?=$ls->bid?>"><?=$ls->subject;?></a></td>
       <td><?=$ls->regdate;?></td>
     </tr>

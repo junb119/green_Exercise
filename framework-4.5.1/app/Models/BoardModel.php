@@ -16,6 +16,7 @@ class BoardModel extends Model
 
     protected $allowedFields = [
       'userid',
+      'username',
       'subject',
       'content', 
       'regdate'

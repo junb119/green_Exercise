@@ -20,6 +20,10 @@ class Board extends BaseController
     }
     public function write()
     {
+        if (!isset($_SESSION['userid'])) {
+            // echo <script></script>
+            return redirect()->to('/login')->with('alert','로그인 해주세요.');
+        }
         // return view('board_write');
         return render('board_write');
     }
@@ -37,6 +41,10 @@ class Board extends BaseController
 
     public function save() 
     {
+        if (!isset($_SESSION['userid'])) {
+            // echo <script></script>
+            return redirect()->to('/login')->with('alert','로그인 해주세요.');
+        }
         // $db = db_connect();
         // $subject = $this->request->getVar('subject');
         // $content = $this->request->getVar('content');
@@ -50,7 +58,8 @@ class Board extends BaseController
 
         $boardModel = new BoardModel();
         $data = [
-            'userid' => 'test',
+            'userid' => $_SESSION['userid'],
+            'username' => $this->request->getVar('username'),
             'subject' => $this->request->getVar('subject'),
             'content' => $this->request->getVar('content')
         ];
