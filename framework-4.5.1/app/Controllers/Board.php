@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\BoardModel;
+use App\Models\FileModel;
 use CodeIgniter\I18n\Time; // Time 클래스 로드
 
 class Board extends BaseController
@@ -36,6 +37,10 @@ class Board extends BaseController
 
         $boardModel = new BoardModel();
         $data['view'] = $boardModel->where('bid',$bid)->first();
+        
+        $fileModel = new FileModel();
+        $data['file_view'] = $fileModel->where('type','board')-> where('bid',$bid) ->first();
+        
         return render('board_view',$data);
     }
 
@@ -57,18 +62,77 @@ class Board extends BaseController
         // $rs = $db -> query($sql,[$subject, $content,$formattedTime]);
 
         $boardModel = new BoardModel();
+        $fileModel = new FileModel();
+        
+
         $data = [
             'userid' => $_SESSION['userid'],
             'username' => $this->request->getVar('username'),
             'subject' => $this->request->getVar('subject'),
             'content' => $this->request->getVar('content')
-        ];
+        ];        
         $mytime = new Time('now' , 'Asia/Seoul');
         $mytime->modify('+9 hours');
         $data['regdate'] = $mytime->toDateTimeString();
-        $boardModel -> insert($data);
-        return $this->response->redirect(site_url('/board'));
+        
+        $db = db_connect(); // insertId 쿼리빌더에서 사용불가하기 때문에 db_connect 사용
+        
+        $bid =  $this->request->getVar('bid');
+        $file =  $this->request->getFile('upfile');
+        
+        if($file->getName()) {
+            $filename = $file->getName();
+            $newname = $file->getRandomName();
+            $filepath = $file->store('board', $newname);
+        }
 
 
+        if ($bid) { // 수정
+            $board = $boardModel->find($bid);
+            if ($board && session('userid') == $board->userid) {
+                $boardModel -> update($bid,$data);
+                return $this->response->redirect(site_url('/boardView/'.$bid));
+            } else {
+                return redirect()->to('/board')->with('alert', '본인이 작성한 글만 수정할 수 있습니다.');    
+            }
+            
+
+        } else { // 새글 입력
+            $boardModel -> insert($data);
+            $insertId = $db->insertID(); // 글생성후 id를 할당
+            $filedata= [
+                'bid'=>$insertId,
+                'userid' => $_SESSION['userid'],
+                'filename'=>$filepath,
+                'type' =>'board'
+            ];
+            $fileModel -> insert($filedata);
+            return $this->response->redirect(site_url('/board'));
+        }
+    }
+    public function modify($bid = null)
+    {
+        $boardModel = new BoardModel();
+        $board = $boardModel->find($bid); // = $boardModel->where('bid',$bid)->first();
+        $data['view'] = $board; // 조회결과를 변수에 할당
+        if($board && session('userid') == $board->userid) { // 해당 글을 쓴 아이디가 로그인한 유저인지 확인
+            return render('board_write',$data);
+        } else {
+            return redirect()->to('/board')->with('alert', '본인이 작성한 글만 수정할 수 있습니다.');
+        }
+        
+    }
+    public function delete($bid = null)
+    {
+        $boardModel = new BoardModel();
+        $board = $boardModel->find($bid); // = $boardModel->where('bid',$bid)->first();
+        if ($board && session('userid') == $board->userid) {
+            $boardModel -> delete($bid);
+            return redirect()->to('/board')->with('alert', '삭제되었습니다.');    
+               
+        } else {
+            return redirect()->to('/board')->with('alert', '본인이 작성한 글만 삭제할 수 있습니다.');    
+        }
+        
     }
 }

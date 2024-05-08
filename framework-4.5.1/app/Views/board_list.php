@@ -1,4 +1,14 @@
+<?php
+if($alert = session('alert')) {
+  ?>
+  <div class="alert alert-warning" role="alert">
+      <?= $alert;?>
+  </div>
+  <?php
+  
+}
 
+?>
 
 <table class="table">
   <thead>
