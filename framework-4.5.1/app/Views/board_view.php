@@ -2,7 +2,7 @@
 <?php
   // echo '<pre>';
   // print_r($view);
-  // print_r($file_view);
+  // // print_r($file_view);
   // echo '</pre>';
 ?>
 <article>
@@ -12,9 +12,9 @@
   <div><?=$view->content;?></div>
   <div>
     <?php
-      if(isset($file_view->filename)) {
+      if(isset($view->filename)) {
         ?>
-        <img src="<?= base_url('/uploads/'.$file_view->filename); ?>" alt="">
+        <img src="<?= base_url('/uploads/'.$view->filename); ?>" alt="">
         <?php
       }
     ?>
