@@ -85,7 +85,6 @@ class Board extends BaseController
 
         $data = [
             'userid' => $_SESSION['userid'],
-            'username' => $this->request->getVar('username'),
             'subject' => $this->request->getVar('subject'),
             'content' => $this->request->getVar('content')
         ];        

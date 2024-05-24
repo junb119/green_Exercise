@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>본문 바로가기</title>
+    <style>
+      .skip_to_content {
+        position: fixed;
+        left: 0;
+        top: -100px;
+      }
+      .skip_to_content:focus {
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#content" title="본문 바로가기" class="skip_to_content">Link 2</a>
+    <header>
+      <h1>abc.com</h1>
+      <nav><h2>Navigation</h2></nav>
+    </header>
+    <main id="content">
+      <h2>Main Content</h2>
+    </main>
+  </body>
+</html>
